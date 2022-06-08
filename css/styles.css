@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0; }
+  
+  a {
+    text-decoration: none;
+    color: #2c2727; }
+    a:hover {
+      text-decoration: none;
+      color: black; }
+
+.letra {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.fondo {
+    background: linear-gradient(to bottom, rgb(148, 243, 235), white 40%, rgb(238, 187, 93));
+}
+
+.titulo {
+    font-family: 'Patrick Hand', cursive;
+    font-size:500%;
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 1%;
+}
+
+.subtitulo {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 280%;
+    color: black;
+    text-align: center;
+}
+
+.cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.cartaIndex {
+    margin: 1%;
+    width:30%;
+}
+
+@media (max-width: 795px) {
+    .cartaIndex {
+        width:80%; 
+    } 
+}
+
+.cartaTitulo {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
+.cartaFoto {
+    width: 100%;
+    border: white;
+}
+
+@media (max-width: 795px) {
+    .cartaFoto {
+        height: 40%;
+    }
+}
+
+@media (max-width: 550px) {
+    .cartaFoto {
+        height: 30%;
+    }
+}
+
+.cartaImagen {
+    border-radius: none;
+    display: block;
+    object-fit: cover;
+}
+
+.calcuOpB {
+    text-align: center;
+    margin: 2%;
+    width: 40%;
+    background-color: rgb(255, 195, 126);
+    border: solid 5px;
+    border-color: aliceblue;
+}
+
+.tituloCalcu {
+    font-weight: normal;
+    padding: 2%;
+}
+
+.cuadroOperaciones {
+    padding: 2%;
+}
+
+.fila {
+    margin-top: 2%;
+    padding: 2%;
+}
+
+.seccionCalcu {
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.calcuPotRaiz {
+    text-align: center;
+    margin: 1%;
+    width: 50%;
+    background-color: rgb(255, 195, 126);
+    border: solid 5px;
+    border-color: aliceblue;
+}
+
+.cuadroPotRaiz {
+    padding: 5%;
+}
+
+
+
+.fondoSesiones {
+    /* background: linear-gradient(to bottom, rgb(240, 203, 134), white 40%, rgb(238, 187, 93)); */
+    background-color: rgb(216, 234, 250);
+}
+
+.tituloSesiones {
+    font-family: 'Patrick Hand', cursive;
+    font-size:400%;
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: rgba(255, 207, 152, 0.774);
+}
+
+.navbarSesiones {
+    text-align: center;
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 160%;
+}
