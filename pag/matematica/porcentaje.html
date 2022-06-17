@@ -18,8 +18,8 @@
 
     <header>
 
-        <h1 class="tituloSesiones"><a href="../../index.html">> >  CALCULANDO  > ></a></h1> 
-        <h2 class="subtituloSesiones">POTENCIA Y RAÍZ</h2>
+        <h1 class="tituloSesiones"><a href="../../index.html">> >  CALCULANDO  > ></a></h1>
+        <h2 class="subtituloSesiones">PORCENTAJE</h2>
 
         <nav>
             <ul class="menu-horizontal">
@@ -60,60 +60,30 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <table cellpadding="10" class="calcuMG table-bordered">
+        <table cellpadding="10" class="calcuG table-bordered">
             <tr class="fila">
-                <th class="tituloCalcu">POTENCIA</th>
+                <th class="tituloCalcu">PORCENTAJE DE UN NÚMERO</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 120px;">
-                            <p>elevado a</p>
+                        <div style="width: 35px;">
+                            <p>El</p>
                         </div>
                         <div style="width: 120px;">
                           <input type="text" class="form-control" placeholder="Num" aria-label="Num">
                         </div>
                         <div style="width: 35px;">
-                            <p>=</p>
+                            <p>%</p>
                         </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">Num elevado a num es resultado</th>
-            </tr>
-        </table>
-
-        <table cellpadding="10" class="calcuMG table-bordered">
-            <tr>
-                <th class="tituloCalcu">RAÍZ</th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 100px;">
-                            <p>La raíz</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 60px;">
+                        <div style="width: 35px;">
                             <p>de</p>
                         </div>
                         <div style="width: 120px;">
                           <input type="text" class="form-control" placeholder="Num" aria-label="Num">
                         </div>
                         <div style="width: 35px;">
-                            <p>=</p>
+                            <p>es</p>
                         </div>
                         <div style="width: 180px;">
                             <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
@@ -125,7 +95,85 @@
                 <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
             </tr>
             <tr>
-                <th class="resultadoCalcu">La raíz num de num es resultado</th>
+                <th class="resultadoCalcu">El num% de num es resultado</th>
+            </tr>
+        </table>
+
+        <table cellpadding="10" class="calcuG table-bordered">
+            <tr class="fila">
+                <th class="tituloCalcu">TOTAL A PARTIR DE UN PORCENTAJE</th>
+            </tr>
+            <tr>
+                <th class="cuadroOperaciones">
+                    <div class="row">
+                        <div style="width: 60px;">
+                            <p>Si el</p>
+                        </div>
+                        <div style="width: 120px;">
+                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        </div>
+                        <div style="width: 35px;">
+                            <p>%</p>
+                        </div>
+                        <div style="width: 35px;">
+                            <p>es</p>
+                        </div>
+                        <div style="width: 120px;">
+                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        </div>
+                        <div style="width: 180px;">
+                            <p>entonces el total es</p>
+                        </div>
+                        <div style="width: 180px;">
+                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
+            </tr>
+            <tr>
+                <th class="resultadoCalcu">Si el num% es num entonces el total es resultado</th>
+            </tr>
+        </table>
+
+        <table cellpadding="10" class="calcuG table-bordered">
+            <tr class="fila">
+                <th class="tituloCalcu">PORCENTAJE DE UNA CANTIDAD DEL TOTAL</th>
+            </tr>
+            <tr>
+                <th class="cuadroOperaciones">
+                    <div class="row">
+                        <div style="width: 120px;">
+                            <p>Si el total es</p>
+                        </div>
+                        <div style="width: 120px;">
+                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        </div>
+                        <div style="width: 80px;">
+                            <p>entonces</p>
+                        </div>
+                        <div style="width: 120px;">
+                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                          </div>
+                        <div style="width: 70px;">
+                            <p>es el</p>
+                        </div>
+                        <div style="width: 180px;">
+                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
+                        </div>
+                        <div style="width: 35px;">
+                            <p>%</p>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
+            </tr>
+            <tr>
+                <th class="resultadoCalcu">Si el total es num, entonces num es el resultado%</th>
             </tr>
         </table>
 

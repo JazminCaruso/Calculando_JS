@@ -19,7 +19,7 @@
     <header>
 
         <h1 class="tituloSesiones"><a href="../../index.html">> >  CALCULANDO  > ></a></h1> 
-        <h2 class="subtituloSesiones">POTENCIA Y RAÍZ</h2>
+        <h2 class="subtituloSesiones">REDONDEO Y TRUNCADO</h2>
 
         <nav>
             <ul class="menu-horizontal">
@@ -60,9 +60,9 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <table cellpadding="10" class="calcuMG table-bordered">
-            <tr class="fila">
-                <th class="tituloCalcu">POTENCIA</th>
+        <table cellpadding="10" class="calcuOpB table-bordered">
+            <tr>
+                <th class="tituloCalcu">REDONDEO A UN DÍGITO</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
@@ -70,17 +70,14 @@
                         <div style="width: 120px;">
                           <input type="text" class="form-control" placeholder="Num" aria-label="Num">
                         </div>
-                        <div style="width: 120px;">
-                            <p>elevado a</p>
+                        <div style="width: 100px;">
+                            <p>redondeado</p>
                         </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <div style="width: 40px;">
+                            <p>es</p>
                         </div>
-                        <div style="width: 35px;">
-                            <p>=</p>
-                        </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
+                        <div style="width: 140px;">
+                          <input type="text" class="form-control" placeholder="Resultado" aria-label="Num">
                         </div>
                     </div>
                 </th>
@@ -89,34 +86,28 @@
                 <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
             </tr>
             <tr>
-                <th class="resultadoCalcu">Num elevado a num es resultado</th>
+                <th class="resultadoCalcu">El número redondeado es</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class="calcuMG table-bordered">
+        <table cellpadding="10" class="calcuOpB table-bordered">
             <tr>
-                <th class="tituloCalcu">RAÍZ</th>
+                <th class="tituloCalcu">REDONDEO A ENTERO</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
+                        <div style="width: 120px;">
+                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        </div>
                         <div style="width: 100px;">
-                            <p>La raíz</p>
+                            <p>redondeado</p>
                         </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <div style="width: 40px;">
+                            <p>es</p>
                         </div>
-                        <div style="width: 60px;">
-                            <p>de</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>=</p>
-                        </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
+                        <div style="width: 140px;">
+                          <input type="text" class="form-control" placeholder="Resultado" aria-label="Num">
                         </div>
                     </div>
                 </th>
@@ -125,7 +116,79 @@
                 <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
             </tr>
             <tr>
-                <th class="resultadoCalcu">La raíz num de num es resultado</th>
+                <th class="resultadoCalcu">El número redondeado a un entero es</th>
+            </tr>
+        </table>
+
+        <table cellpadding="10" class=" calcuOpB table-bordered">
+            <tr>
+                <th class="tituloCalcu">REDONDEO A N DÍGITOS</th>
+            </tr>
+            <tr>
+                <th class="cuadroOperaciones">
+                    <div class="row">
+                        <div style="width: 220px;">
+                            <p>Número:</p>
+                        </div>
+                        <div style="width: 120px;">
+                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th class="cuadroOperaciones">
+                    <div class="row">
+                        <div style="width: 220px;">
+                            <p>Cantidad de dígitos:</p>
+                        </div>
+                        <div style="width: 120px;">
+                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
+            </tr>
+            <tr>
+                <th class="resultadoCalcu">El número redondeado con n dígitos es </th>
+            </tr>
+        </table>
+
+        <table cellpadding="10" class=" calcuOpB table-bordered">
+            <tr>
+                <th class="tituloCalcu">TRUNCADO A N DÍGITOS</th>
+            </tr>
+            <tr>
+                <th class="cuadroOperaciones">
+                    <div class="row">
+                        <div style="width: 220px;">
+                            <p>Número:</p>
+                        </div>
+                        <div style="width: 120px;">
+                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th class="cuadroOperaciones">
+                    <div class="row">
+                        <div style="width: 220px;">
+                            <p>Cantidad de dígitos:</p>
+                        </div>
+                        <div style="width: 120px;">
+                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
+            </tr>
+            <tr>
+                <th class="resultadoCalcu">El número truncado con n dígitos es </th>
             </tr>
         </table>
 

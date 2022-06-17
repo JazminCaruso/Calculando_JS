@@ -30,6 +30,14 @@ while (cond == "calcular") {
     cond = prompt("Ingrese la palabra calcular si quiere realizar otro cálculo.\nSi desea salir, escriba otra cosa.")
 }
 
+// -----------------listas-----------------
+
+let calculando = ["Matemática", "Finanzas", "Física"]
+let matematica = ["Operaciones Básicas", "Potencia y raíz", "Ecuaciones", "Regla de 3", "Porcentaje", "Redondeo y Truncado", "Valor absoluto", "Distancia y punto medio", "Pitágoras"]
+let fisica = ["Estática", "Cinemática", "Conversor"]
+
+// -----------------funciones-----------------
+
 function suma(a, b) {
     return a + b;
 }
@@ -57,102 +65,6 @@ function potencia(a, b) {
 
 function raizCuadrada(a) {
     return a**0.5;
-}
-
-function pCuadrado(a) {
-    return a*4;
-}
-
-function pRectangulo(a, b) {
-    return (a*2) + (b*2);
-}
-
-function pTriangEq(a) {
-    return a*3;
-}
-
-function pTriangIs(a, b) {
-    return (a*2) + b;
-}
-
-function pTriangEs(a, b, c) {
-    return a + b + c;
-}
-
-function pRombo(a) {
-    return a*4;
-}
-
-function pTrapecio(a, b, c) {
-    return (a*2) + b + c;
-}
-
-function pPoligonoReg(a, b) {
-    return a * b;
-}
-
-function pPoligonoEsc(a, b) {
-    return 2 * (a + b);
-}
-
-function pCirculo(a) {
-    return 2 * a * 3.141592;
-}
-
-function aCuadrado(a) {
-    return a * a;
-}
-
-function aRectangulo(a, b) {
-    return a * b;
-}
-
-function aTriangulo(a, b) {
-    return (a * b) / 2;
-}
-
-function aRombo(a, b) {
-    return (a * b) / 2;
-}
-
-function aRomboide(a, b) {
-    return a * b;
-}
-
-function aTrapecio(a, b, c) {
-    return ((a + b) * c) / 2;
-}
-
-function aPoligono(a, b) {
-    return (a * b) / 2;
-}
-
-function aCirculo(a, b) {
-    return 3.141592 * (a * b);
-}
-
-function vCilindro(a, b) {
-    return 3.141592 * (a**2) * b;
-}
-
-function vEsfera(a) {
-    return 3.141592 * (a**3) * (4/3);
-}
-
-function vCono(a, b) {
-    return (3.141592 * (a**2) * b) / 3;
-}
-
-function vPrisma(a, b, c) {
-    return a * b * c;
-}
-
-function vPiramide(a, b) {
-    return ((a**2) * b) / 3;
-}
-
-function vCubo(a) {
-    return a**3;
 }
 
 function porcentaje(a, b) {
