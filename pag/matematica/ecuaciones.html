@@ -60,7 +60,7 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <!-- <table cellpadding="10" class="calcuMG table-bordered">
+        <table cellpadding="10" class="calcuMG table-bordered">
             <tr class="fila">
                 <th class="tituloCalcu">PRIMER GRADO / LINEAL</th>
             </tr>
@@ -71,7 +71,7 @@
                             <p>Coeficiente lineal:</p>
                         </div>
                         <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                          <input id="coefLineal" type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
                         </div>
                     </div>
                 </th>
@@ -83,19 +83,19 @@
                             <p>Término independiente:</p>
                         </div>
                         <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                          <input id="terminoInd" type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
                         </div>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
+                <th class="resultadoCalcu"><button id="botonCalc" class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
             </tr>
             <tr>
-                <th class="resultadoCalcu">La ecuación queda de la forma: </th>
+                <th id="ecL" class="resultadoCalcu">La ecuación es:</th>
             </tr>
             <tr>
-                <th class="resultadoCalcu">El valor de x es resultado</th>
+                <th id="resL" class="resultadoCalcu">La raíz es:</th>
             </tr>
         </table>
 
@@ -110,7 +110,7 @@
                             <p>Coeficiente cuadrático:</p>
                         </div>
                         <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                          <input id="coefCuadC"type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
                         </div>
                     </div>
                 </th>
@@ -122,7 +122,7 @@
                             <p>Coeficiente lineal:</p>
                         </div>
                         <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                          <input id="coefLinealC"type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
                         </div>
                     </div>
                 </th>
@@ -134,21 +134,21 @@
                             <p>Término independiente:</p>
                         </div>
                         <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
+                          <input id="terminoIndC" type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
                         </div>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
+                <th class="resultadoCalcu"><button id="botonCalcC" class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
             </tr>
             <tr>
-                <th class="resultadoCalcu">La ecuación queda de la forma: </th>
+                <th id="ecC" class="resultadoCalcu">La ecuación es: </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu">Los valores de x son resultado1 y resultado2</th>
+                <th id="resC" class="resultadoCalcu">Las raíces son: </th>
             </tr>
-        </table> -->
+        </table>
 
     </section>
 
