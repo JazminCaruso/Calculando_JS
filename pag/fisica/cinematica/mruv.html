@@ -29,21 +29,13 @@
                         <li><a href="../../matematica/opBasicas.html">Operaciones básicas</a></li>
                         <li><a href="../../matematica/potenciaYRaiz.html">Potencia y raíz</a></li>
                         <li><a href="../../matematica/ecuaciones.html">Ecuaciones</a></li>
-                        <li><a href="../../matematica/reglaDe3.html">Regla de 3</a></li>
-                        <li><a href="../../matematica/porcentaje.html">Porcentaje</a></li>
-                        <li><a href="../../matematica/redYTrunc.html">Redondeo y truncado</a></li>
-                        <li><a href="../../matematica/valorAbs.html">Valor absoluto</a></li>
-                        <li><a href="../../matematica/distYPtoMedio.html">Distancia y punto medio</a></li>
-                        <li><a href="../../matematica/pitagoras.html">Pitágoras</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Finanzas</a>
                     <ul class="menu-vertical">
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
+                        <li><a href="../../finanzas/intereses.html">Intereses</a></li>
+                        <li><a href="../../finanzas/plazofijo.html">Plazo Fijo</a></li>
                     </ul>
                 </li>
                 <li>
@@ -60,403 +52,228 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">VELOCIDAD (sin distancia), m/s</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <p>Velocidad inicial (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formVel1" class="formulario">
+                            <label for="input23" class="input">Velocidad inicial (m/s):</label>
+                            <input id="input23" class="input" type="text">
+                            <br>
+                            <label for="input24" class="input">Aceleración (m/s²):</label>
+                            <input id="input24" class="input" type="text">
+                            <br>
+                            <label for="input25" class="input">Tiempo (s):</label>
+                            <input id="input25" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Aceleración (m/s²):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Tiempo (s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La velocidad es resultado m/s</th>
+                <th id="resV1" class="resultadoCalcu">La velocidad es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">VELOCIDAD (sin tiempo), m/s</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <p>Velocidad inicial (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formVel2" class="formulario">
+                            <label for="input26" class="input">Velocidad inicial (m/s):</label>
+                            <input id="input26" class="input" type="text">
+                            <br>
+                            <label for="input27" class="input">Aceleración (m/s²):</label>
+                            <input id="input27" class="input" type="text">
+                            <br>
+                            <label for="input28" class="input">Distancia (m):</label>
+                            <input id="input28" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Aceleración (m/s²):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Distancia (m):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La velocidad es resultado m/s</th>
+                <th id="resV2" class="resultadoCalcu">La velocidad es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">ACELERACIÓN, m/s²</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <p>Velocidad inicial (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formAcel" class="formulario">
+                            <label for="input29" class="input">Velocidad inicial (m/s):</label>
+                            <input id="input29" class="input" type="text">
+                            <br>
+                            <label for="input30" class="input">Velocidad final (m/s):</label>
+                            <input id="input30" class="input" type="text">
+                            <br>
+                            <label for="input31" class="input">Tiempo (s):</label>
+                            <input id="input31" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Velocidad final (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Tiempo (s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La aceleración es resultado m/s²</th>
+                <th id="resA" class="resultadoCalcu">La aceleración es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">TIEMPO, segundos</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <p>Velocidad inicial (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formTiempo" class="formulario">
+                            <label for="input32" class="input">Velocidad inicial (m/s):</label>
+                            <input id="input32" class="input" type="text">
+                            <br>
+                            <label for="input33" class="input">Velocidad final (m/s):</label>
+                            <input id="input33" class="input" type="text">
+                            <br>
+                            <label for="input34" class="input">Aceleración (m/s²):</label>
+                            <input id="input34" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Velocidad final (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Aceleración (m/s²):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">El tiempo es resultado segundos</th>
+                <th id="resT" class="resultadoCalcu">El tiempo es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">DISTANCIA (sin aceleración), metros</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <p>Velocidad inicial (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formDis1" class="formulario">
+                            <label for="input35" class="input">Velocidad inicial (m/s):</label>
+                            <input id="input35" class="input" type="text">
+                            <br>
+                            <label for="input36" class="input">Velocidad final (m/s):</label>
+                            <input id="input36" class="input" type="text">
+                            <br>
+                            <label for="input37" class="input">Tiempo (s):</label>
+                            <input id="input37" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Velocidad final (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Tiempo (s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La distancia es resultado metros</th>
+                <th id="resD1" class="resultadoCalcu">La distancia es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">DISTANCIA (sin velocidad final), metros</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <p>Velocidad inicial (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formDis2" class="formulario">
+                            <label for="input38" class="input">Velocidad inicial (m/s):</label>
+                            <input id="input38" class="input" type="text">
+                            <br>
+                            <label for="input39" class="input">Aceleración (m/s²):</label>
+                            <input id="input39" class="input" type="text">
+                            <br>
+                            <label for="input40" class="input">Tiempo (s)</label>
+                            <input id="input40" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Aceleración (m/s²):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Tiempo (s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La distancia es resultado metros</th>
+                <th id="resD2" class="resultadoCalcu">La distancia es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">DISTANCIA (sin tiempo), metros</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <p>Velocidad inicial (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formDis3" class="formulario">
+                            <label for="input41" class="input">Velocidad inicial (m/s):</label>
+                            <input id="input41" class="input" type="text">
+                            <br>
+                            <label for="input42" class="input">Velocidad final (m/s):</label>
+                            <input id="input42" class="input" type="text">
+                            <br>
+                            <label for="input43" class="input">Aceleración (m/s²):</label>
+                            <input id="input43" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Velocidad final (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Aceleración (m/s²):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La distancia es resultado metros</th>
+                <th id="resD3" class="resultadoCalcu">La distancia es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">POSICIÓN</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 180px;">
-                            <p>Posición inicial:</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formPos" class="formulario">
+                            <label for="input44" class="input">Posición inicial (m):</label>
+                            <input id="input44" class="input" type="text">
+                            <br>
+                            <label for="input45" class="input">Velocidad inicial (m/s):</label>
+                            <input id="input45" class="input" type="text">
+                            <br>
+                            <label for="input46" class="input">Aceleración (m/s²):</label>
+                            <input id="input46" class="input" type="text">
+                            <br>
+                            <label for="input47" class="input">Tiempo (s):</label>
+                            <input id="input47" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 200px;">
-                            <p>Velocidad inicial (m/s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Aceleración (m/s²):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 180px;">
-                            <p>Tiempo (s):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La posición es</th>
+                <th id="resP" class="resultadoCalcu">La posición es:</th>
             </tr>
         </table>
 
     </section>
+
+    <script src="../../../javaScript/mruv.js"></script>
 
 </body>
 </html>

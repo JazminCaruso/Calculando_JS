@@ -29,21 +29,13 @@
                         <li><a href="./opBasicas.html">Operaciones básicas</a></li>
                         <li><a href="./potenciaYRaiz.html">Potencia y raíz</a></li>
                         <li><a href="./ecuaciones.html">Ecuaciones</a></li>
-                        <li><a href="./reglaDe3.html">Regla de 3</a></li>
-                        <li><a href="./porcentaje.html">Porcentaje</a></li>
-                        <li><a href="./redYTrunc.html">Redondeo y truncado</a></li>
-                        <li><a href="./valorAbs.html">Valor absoluto</a></li>
-                        <li><a href="./distYPtoMedio.html">Distancia y punto medio</a></li>
-                        <li><a href="./pitagoras.html">Pitágoras</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Finanzas</a>
                     <ul class="menu-vertical">
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
+                        <li><a href="../finanzas/intereses.html">Intereses</a></li>
+                        <li><a href="../finanzas/plazofijo.html">Plazo fijo</a></li>
                     </ul>
                 </li>
                 <li>
@@ -60,172 +52,89 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <table cellpadding="10" class="calcuOpB table-bordered">
+        <table class="calcuOpB">
             <tr class="fila">
                 <th class="tituloCalcu">SUMA</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>+</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>=</p>
-                        </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
-                        </div>
-                    </div>
+                    <form id="formSuma" class="row">
+                        <input style="width: 120px;" id="sumaA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <p style="width: 35px; padding-top: 2%;">+</p>
+                        <input style="width: 120px;" id="sumaB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <br>
+                        <input type="submit" class="boton" value="Calcular">
+                    </form>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">El resultado de sumar num + num es resultado</th>
+                <th id="resSuma" class="resultadoCalcu">El resultado es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuOpB">
+            <tr class="fila">
                 <th class="tituloCalcu">RESTA</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>-</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>=</p>
-                        </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
-                        </div>
-                    </div>
+                    <form id="formResta" class="row">
+                        <input style="width: 120px;" id="restaA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <p style="width: 35px; padding-top: 2%;">-</p>
+                        <input style="width: 120px;" id="restaB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <br>
+                        <input type="submit" class="boton" value="Calcular">
+                    </form>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">El resultado de restar num - num es resultado</th>
+                <th id="resResta" class="resultadoCalcu">El resultado es:</th>
             </tr>
         </table>
-    
-        <table cellpadding="10" class="calcuOpB table-bordered">
-            <tr>
+
+        <table class="calcuOpB">
+            <tr class="fila">
                 <th class="tituloCalcu">MULTIPLICACIÓN</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>x</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>=</p>
-                        </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
-                        </div>
-                    </div>
+                    <form id="formMult" class="row">
+                        <input style="width: 120px;" id="multA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <p style="width: 35px; padding-top: 2%;">x</p>
+                        <input style="width: 120px;" id="multB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <br>
+                        <input type="submit" class="boton" value="Calcular">
+                    </form>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">El resultado de multiplicar num por num es resultado</th>
+                <th id="resMult" class="resultadoCalcu">El resultado es:</th>
             </tr>
         </table>
-    
-        <table cellpadding="10" class="calcuOpB table-bordered">
-            <tr>
+
+        <table class="calcuOpB">
+            <tr class="fila">
                 <th class="tituloCalcu">DIVISIÓN</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>/</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>=</p>
-                        </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
-                        </div>
-                    </div>
+                    <form id="formDiv" class="row">
+                        <input style="width: 120px;" id="divA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <p style="width: 35px; padding-top: 2%;">/</p>
+                        <input style="width: 120px;" id="divB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <br>
+                        <input type="submit" class="boton" value="Calcular">
+                    </form>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">El resultado de dividir num por num es resultado</th>
-            </tr>
-        </table>
-    
-        <table cellpadding="10" class="calcuOpB table-bordered">
-            <tr>
-                <th class="tituloCalcu">RESTO DIVISIÓN</th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>%</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>=</p>
-                        </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">El resto de dividir num por num es resultado</th>
+                <th id="resDiv" class="resultadoCalcu">El resultado es:</th>
             </tr>
         </table>
 
     </section>
+
+    <script src="../../javaScript/opBasicas.js"></script>
 
 </body>
 </html>

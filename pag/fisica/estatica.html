@@ -29,21 +29,13 @@
                         <li><a href="../matematica/opBasicas.html">Operaciones básicas</a></li>
                         <li><a href="../matematica/potenciaYRaiz.html">Potencia y raíz</a></li>
                         <li><a href="../matematica/ecuaciones.html">Ecuaciones</a></li>
-                        <li><a href="../matematica/reglaDe3.html">Regla de 3</a></li>
-                        <li><a href="../matematica/porcentaje.html">Porcentaje</a></li>
-                        <li><a href="../matematica/redYTrunc.html">Redondeo y truncado</a></li>
-                        <li><a href="../matematica/valorAbs.html">Valor absoluto</a></li>
-                        <li><a href="../matematica/distYPtoMedio.html">Distancia y punto medio</a></li>
-                        <li><a href="../matematica/pitagoras.html">Pitágoras</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Finanzas</a>
                     <ul class="menu-vertical">
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
+                        <li><a href="../finanzas/intereses.html">Intereses</a></li>
+                        <li><a href="../finanzas/plazofijo.html">Plazo fijo</a></li>
                     </ul>
                 </li>
                 <li>
@@ -60,129 +52,99 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">MASA (según peso), kg</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 180px;">
-                            <p>Valor del peso (N):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formMasaP" class="formulario">
+                            <label for="input6" class="input">Valor del peso (N):</label>
+                            <input id="input6" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La masa es resultado kg</th>
+                <th id="resMP" class="resultadoCalcu">El valor de la masa es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">PESO, Newton</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 180px;">
-                            <p>Valor de la masa (kg):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formPeso" class="formulario">
+                            <label for="input7" class="input">Valor de la masa (kg):</label>
+                            <input id="input7" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">El peso es resultado N</th>
+                <th id="resP" class="resultadoCalcu">El valor del peso es:</th>
             </tr>
         </table>
 
-
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">MASA (según fuerza), kg</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 180px;">
-                            <p>Valor de la fuerza (N):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formMasaF" class="formulario">
+                            <label for="input8" class="input">Valor de la fuerza (N):</label>
+                            <input id="input8" class="input" type="text">
+                            <br>
+                            <label for="input9" class="input">Valor de la aceleración (m/s²):</label>
+                            <input id="input9" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 240px;">
-                            <p>Valor de la aceleración (m/s²):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La masa es resultado kg</th>
+                <th id="resMF" class="resultadoCalcu">El valor de la masa es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class=" calcuOpB table-bordered">
-            <tr>
+        <table class="calcuM">
+            <tr class="fila">
                 <th class="tituloCalcu">FUERZA, Newton</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 180px;">
-                            <p>Valor de la masa (kg):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
+                        <form id="formFuerza" class="formulario">
+                            <label for="input10" class="input">Valor de la masa (kg):</label>
+                            <input id="input10" class="input" type="text">
+                            <br>
+                            <label for="input11" class="input">Valor de la aceleración (m/s²):</label>
+                            <input id="input11" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 240px;">
-                            <p>Valor de la aceleración (m/s²):</p>
-                        </div>
-                        <div style="width: 120px;">
-                            <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La fuerza es resultado N</th>
+                <th id="resF" class="resultadoCalcu">El valor de la fuerza es:</th>
             </tr>
         </table>
 
     </section>
+
+    <script src="../../javaScript/estatica.js"></script>
 
 </body>
 </html>

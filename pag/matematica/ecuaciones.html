@@ -29,21 +29,13 @@
                         <li><a href="./opBasicas.html">Operaciones básicas</a></li>
                         <li><a href="./potenciaYRaiz.html">Potencia y raíz</a></li>
                         <li><a href="./ecuaciones.html">Ecuaciones</a></li>
-                        <li><a href="./reglaDe3.html">Regla de 3</a></li>
-                        <li><a href="./porcentaje.html">Porcentaje</a></li>
-                        <li><a href="./redYTrunc.html">Redondeo y truncado</a></li>
-                        <li><a href="./valorAbs.html">Valor absoluto</a></li>
-                        <li><a href="./distYPtoMedio.html">Distancia y punto medio</a></li>
-                        <li><a href="./pitagoras.html">Pitágoras</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Finanzas</a>
                     <ul class="menu-vertical">
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
+                        <li><a href="../finanzas/intereses.html">Intereses</a></li>
+                        <li><a href="../finanzas/plazofijo.html">Plazo fijo</a></li>
                     </ul>
                 </li>
                 <li>
@@ -60,45 +52,24 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <h2>Estos inputs funcionan</h2>
-        <form id="formulario">
-            <input id="input1" type="text">
-            <input id="input2" type="text">
-            <input type="submit" value="Enviar">
-        </form>
-
-        <table cellpadding="10" class="calcuMG table-bordered">
+        <table class="calcuMG">
             <tr class="fila">
                 <th class="tituloCalcu">PRIMER GRADO / LINEAL</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <!-- <p>Coeficiente lineal:</p> -->
-                            <p>Este quiero que funcione</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input id="coefLineal" type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
-                        </div>
+                        <form id="formulario1" class="formulario">
+                            <label for="input1" class="input">Coeficiente lineal:</label>
+                            <input id="input1" class="input" type="text">
+                            <br>
+                            <label for="input2" class="input">Término independiente:</label>
+                            <input id="input2" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Enviar">
+                        </form>
                     </div>
                 </th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 200px;">
-                            <!-- <p>Término independiente:</p> -->
-                            <p>Y este</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input id="terminoInd" type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button id="botonCalc" class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
             </tr>
             <tr>
                 <th id="ecL" class="resultadoCalcu">La ecuación es:</th>
@@ -108,54 +79,33 @@
             </tr>
         </table>
 
-        <table cellpadding="10" class="calcuMG table-bordered">
-            <tr>
+        <table class="calcuMG">
+            <tr class="fila">
                 <th class="tituloCalcu">SEGUNDO GRADO / CUADRÁTICA</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <p>Coeficiente cuadrático:</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input id="coefCuadC"type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
-                        </div>
+                        <form id="formulario2" class="formulario">
+                            <label for="input3" class="input">Coeficiente cuadrático:</label>
+                            <input id="input3" class="input" type="text">
+                            <br>
+                            <label for="input4" class="input">Coeficiente lineal:</label>
+                            <input id="input4" class="input" type="text">
+                            <br>
+                            <label for="input5" class="input">Término independiente:</label>
+                            <input id="input5" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Enviar">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 200px;">
-                            <p>Coeficiente lineal:</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input id="coefLinealC"type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
-                        </div>
-                    </div>
-                </th>
+                <th id="ecC" class="resultadoCalcu">La ecuación es:</th>
             </tr>
             <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 200px;">
-                            <p>Término independiente:</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input id="terminoIndC" type="text" class="form-control" placeholder="Num" aria-label="Num" value="">
-                        </div>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu"><button id="botonCalcC" class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th id="ecC" class="resultadoCalcu">La ecuación es: </th>
-            </tr>
-            <tr>
-                <th id="resC" class="resultadoCalcu">Las raíces son: </th>
+                <th id="resC" class="resultadoCalcu">Las raíces son:</th>
             </tr>
         </table>
 

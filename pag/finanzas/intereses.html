@@ -18,32 +18,24 @@
 
     <header>
 
-        <h1 class="tituloSesiones"><a href="../../index.html">> >  CALCULANDO  > ></a></h1> 
-        <h2 class="subtituloSesiones">VALOR ABSOLUTO</h2>
+        <h1 class="tituloSesiones"><a href="../../index.html">> >  CALCULANDO  > ></a></h1>
+        <h2 class="subtituloSesiones">INTERESES</h2>
 
         <nav>
             <ul class="menu-horizontal">
                 <li>
                     <a href="#">Matemática</a>
                     <ul class="menu-vertical">
-                        <li><a href="./opBasicas.html">Operaciones básicas</a></li>
-                        <li><a href="./potenciaYRaiz.html">Potencia y raíz</a></li>
-                        <li><a href="./ecuaciones.html">Ecuaciones</a></li>
-                        <li><a href="./reglaDe3.html">Regla de 3</a></li>
-                        <li><a href="./porcentaje.html">Porcentaje</a></li>
-                        <li><a href="./redYTrunc.html">Redondeo y truncado</a></li>
-                        <li><a href="./valorAbs.html">Valor absoluto</a></li>
-                        <li><a href="./distYPtoMedio.html">Distancia y punto medio</a></li>
-                        <li><a href="./pitagoras.html">Pitágoras</a></li>
+                        <li><a href="../matematica/opBasicas.html">Operaciones básicas</a></li>
+                        <li><a href="../matematica/potenciaYRaiz.html">Potencia y raíz</a></li>
+                        <li><a href="../matematica/ecuaciones.html">Ecuaciones</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Finanzas</a>
                     <ul class="menu-vertical">
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
+                        <li><a href="./intereses.html">Intereses</a></li>
+                        <li><a href="./plazoFijo.html">Plazo fijo</a></li>
                     </ul>
                 </li>
                 <li>
@@ -60,37 +52,36 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <table cellpadding="10" class="calcuM table-bordered">
-            <tr>
-                <th class="tituloCalcu">CÁLCULO DEL VALOR ABSOLUTO</th>
+        <table class="calcuM">
+            <tr class="fila">
+                <th class="tituloCalcu">CÁCLCULO DE INTERÉS</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <div style="width: 200px;">
-                            <p>El valor absoluto de </p>
-                        </div>
-                        <div style="width: 140px;">
-                          <input type="text" class="form-control" placeholder="Num/Oper." aria-label="Num">
-                        </div>
-                        <div style="width: 60px;">
-                            <p>es</p>
-                        </div>
-                        <div style="width: 140px;">
-                          <input type="text" class="form-control" placeholder="Resultado" aria-label="Num">
-                        </div>
+                        <form id="formularioInt" class="formulario">
+                            <label for="input48" class="input">Precio:</label>
+                            <input id="input48" class="input" type="text">
+                            <br>
+                            <label for="input49" class="input">Interés (%):</label>
+                            <input id="input49" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Enviar">
+                        </form>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
+                <th id="resI1" class="resultadoCalcu">El interés agregado es:</th>
             </tr>
             <tr>
-                <th class="resultadoCalcu">El valor absoluto de num es resultado</th>
+                <th id="resI2" class="resultadoCalcu">El valor final es:</th>
             </tr>
         </table>
-
+        
     </section>
+
+    <script src="../../javaScript/intereses.js"></script>
 
 </body>
 </html>

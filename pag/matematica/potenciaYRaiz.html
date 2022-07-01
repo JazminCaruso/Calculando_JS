@@ -29,21 +29,13 @@
                         <li><a href="./opBasicas.html">Operaciones básicas</a></li>
                         <li><a href="./potenciaYRaiz.html">Potencia y raíz</a></li>
                         <li><a href="./ecuaciones.html">Ecuaciones</a></li>
-                        <li><a href="./reglaDe3.html">Regla de 3</a></li>
-                        <li><a href="./porcentaje.html">Porcentaje</a></li>
-                        <li><a href="./redYTrunc.html">Redondeo y truncado</a></li>
-                        <li><a href="./valorAbs.html">Valor absoluto</a></li>
-                        <li><a href="./distYPtoMedio.html">Distancia y punto medio</a></li>
-                        <li><a href="./pitagoras.html">Pitágoras</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Finanzas</a>
                     <ul class="menu-vertical">
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
-                        <li><a href="#">No disponible</a></li>
+                        <li><a href="../finanzas/intereses.html">Intereses</a></li>
+                        <li><a href="../finanzas/plazofijo.html">Plazo fijo</a></li>
                     </ul>
                 </li>
                 <li>
@@ -60,76 +52,50 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <table cellpadding="10" class="calcuMG table-bordered">
+        <table class="calcuMG">
             <tr class="fila">
                 <th class="tituloCalcu">POTENCIA</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 120px;">
-                            <p>elevado a</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>=</p>
-                        </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
-                        </div>
-                    </div>
+                    <form id="formPot" class="row">
+                        <input style="width: 100px;" id="potA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <p style="width: 120px; padding-top: 2%;">elevado a</p>
+                        <input style="width: 100px;" id="potB" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <br>
+                        <input type="submit" class="boton" value="Calcular">
+                    </form>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">Num elevado a num es resultado</th>
+                <th id="resPot" class="resultadoCalcu">El resultado es:</th>
             </tr>
         </table>
 
-        <table cellpadding="10" class="calcuMG table-bordered">
-            <tr>
+        <table class="calcuMG">
+            <tr class="fila">
                 <th class="tituloCalcu">RAÍZ</th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
-                    <div class="row">
-                        <div style="width: 100px;">
-                            <p>La raíz</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 60px;">
-                            <p>de</p>
-                        </div>
-                        <div style="width: 120px;">
-                          <input type="text" class="form-control" placeholder="Num" aria-label="Num">
-                        </div>
-                        <div style="width: 35px;">
-                            <p>=</p>
-                        </div>
-                        <div style="width: 180px;">
-                            <input type="text" class="form-control" placeholder="Resultado" aria-label="Resultado">
-                        </div>
-                    </div>
+                    <form id="formRaizG" class="row">
+                        <p style="width: 120px; padding-top: 2%;">La raíz</p>
+                        <input style="width: 100px;" id="raizA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <p style="width: 60px; padding-top: 2%;">de</p>
+                        <input style="width: 100px;" id="raizB" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <br>
+                        <input type="submit" class="boton" value="Calcular">
+                    </form>
                 </th>
             </tr>
             <tr>
-                <th class="resultadoCalcu"><button class="botonCalcu" name="Calcular" type="button">Calcular</button></th>
-            </tr>
-            <tr>
-                <th class="resultadoCalcu">La raíz num de num es resultado</th>
+                <th id="resRaizG" class="resultadoCalcu">El resultado es:</th>
             </tr>
         </table>
 
     </section>
+
+    <script src="../../javaScript/potenciaYRaiz.js"></script>
 
 </body>
 </html>
