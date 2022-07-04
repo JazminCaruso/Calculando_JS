@@ -19,7 +19,7 @@ for (const calculadora of listaCalculadoras) {
     contenedor.className = "card"
 
     contenedor.innerHTML = ` 
-                            <img class="card-img-top" src=${calculadora.imagen}/>
+                            <img class="card-img-top" src=${calculadora.imagen} alt=${calculadora.nombre}>
                             <h5 class="card-body tituloCard"><a href=${calculadora.url}>${calculadora.nombre}</a></h5>
                             </div>`
 

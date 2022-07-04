@@ -3,6 +3,7 @@
 let formSuma = document.getElementById("formSuma")
 formSuma.addEventListener("submit", validarS)
 
+let resultado = 0;
 function sumar(a, b) {
     resultado = parseFloat(a) + parseFloat(b)
     return resultado;
@@ -17,7 +18,9 @@ function validarS(e) {
     let b = form.children[2].value
     sumar(a,b)
     let resultadoText = `El resultado de ${a} + ${b} es ${resultado}`
-    resSuma.innerHTML = `${resultadoText}`;
+    localStorage.setItem("resultadoGuardadooo", resultadoText)
+    let resultadoFinal = localStorage.getItem("resultadoGuardadooo")
+    resSuma.innerHTML = `${resultadoFinal}`;
     form.reset()
 }
 
@@ -30,6 +33,7 @@ function redondear2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
+let resultadoRed = 0;
 function restar(a, b) {
     resultado = parseFloat(a) - parseFloat(b)
     resultadoRed = redondear2(resultado)
@@ -82,6 +86,7 @@ function redondear2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
+let resultadoRedD = 0;
 function dividir(a, b) {
     resultado = parseFloat(a) / parseFloat(b)
     resultadoRedD = redondear2(resultado)

@@ -18,6 +18,7 @@ function intereses(a, b) {
     return resFinal;
 }
 
+let resultI0 = document.getElementById("resI0")
 let resultI1 = document.getElementById("resI1")
 let resultI2 = document.getElementById("resI2")
 
@@ -27,7 +28,9 @@ function validar(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     intereses(a,b)
-    let resultadoTex = `El interés agregado es: ${resRed} pesos`
+    let resultadoTe = `Si el precio es ${a} pesos y el interés es de ${b}%`
+    resultI0.innerHTML = `${resultadoTe}`;
+    let resultadoTex = `El valor agregado es: ${resRed} pesos`
     resultI1.innerHTML = `${resultadoTex}`;
     let resultadoText = `El valor final es: ${resFinal} pesos`
     resultI2.innerHTML = `${resultadoText}`;

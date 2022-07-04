@@ -38,11 +38,7 @@ function redondear2(a) {
 
 function distanciaP(a, b) {
     resultado = parseFloat(b) - parseFloat(a)
-    if (resultado < 0) {
-        res = resultado * (-1)
-    } else {
-        res = resultado
-    }
+    resultado < 0 ? res = resultado * (-1) : res = resultado
     resRed = redondear2(res)
     return resRed
 }

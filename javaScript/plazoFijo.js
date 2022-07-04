@@ -1,4 +1,4 @@
-// --------------------------- interés ---------------------------
+// --------------------------- plazo fijo ---------------------------
 
 let formularioPF = document.getElementById("formularioPF")
 formularioPF.addEventListener("submit", validar)
