@@ -1,11 +1,13 @@
-// --------------------------- distancia  ---------------------------
-
-let formularioDist = document.getElementById("formDist")
-formularioDist.addEventListener("submit", validarD)
+// --------------------------- redondeo ---------------------------
 
 function redondear2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
+
+// --------------------------- distancia  ---------------------------
+
+let formularioDist = document.getElementById("formDist")
+formularioDist.addEventListener("submit", validarD)
 
 let resultado = 0
 function distancia(a, b) {
@@ -32,10 +34,6 @@ function validarD(e) {
 let formularioDistP = document.getElementById("formDistP")
 formularioDistP.addEventListener("submit", validarDP)
 
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
-
 function distanciaP(a, b) {
     resultado = parseFloat(b) - parseFloat(a)
     resultado < 0 ? res = resultado * (-1) : res = resultado
@@ -61,10 +59,6 @@ function validarDP(e) {
 let formularioVel = document.getElementById("formVel")
 formularioVel.addEventListener("submit", validarV)
 
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
-
 function velocidad(a, b) {
     resultado = parseFloat(a)/parseFloat(b)
     resRed = redondear2(resultado)
@@ -89,10 +83,6 @@ function validarV(e) {
 let formularioTiempo = document.getElementById("formTiempo")
 formularioTiempo.addEventListener("submit", validarT)
 
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
-
 function tiempo(a, b) {
     resultado = parseFloat(a)/parseFloat(b)
     resRed = redondear2(resultado)
@@ -116,10 +106,6 @@ function validarT(e) {
 
 let formularioPos = document.getElementById("formPos")
 formularioPos.addEventListener("submit", validarP)
-
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
 
 function posicion(a, b, c) {
     resultado = parseFloat(a) + (parseFloat(b)*parseFloat(c))

@@ -24,8 +24,9 @@ function validar(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
+    let resultadoText = ``
     plazoFijo(a,b,c)
-    let resultadoText = `Lo ganado será: ${resRed} pesos`
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `Lo ganado será: ${resRed} pesos`
     resultPF.innerHTML = `${resultadoText}`;
     form.reset()
 }

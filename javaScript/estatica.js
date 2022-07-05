@@ -1,11 +1,13 @@
-// --------------------------- masa según peso  ---------------------------
-
-let formularioMasaP = document.getElementById("formMasaP")
-formularioMasaP.addEventListener("submit", validarMP)
+// --------------------------- redondeo ---------------------------
 
 function redondear2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
+
+// --------------------------- masa según peso  ---------------------------
+
+let formularioMasaP = document.getElementById("formMasaP")
+formularioMasaP.addEventListener("submit", validarMP)
 
 function masaPeso(a) {
     resultado = parseFloat(a)/9.8
@@ -30,10 +32,6 @@ function validarMP(e) {
 let formularioPeso = document.getElementById("formPeso")
 formularioPeso.addEventListener("submit", validarP)
 
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
-
 function peso(a) {
     resultado = parseFloat(a)*9.8
     resRed = redondear2(resultado)
@@ -56,10 +54,6 @@ function validarP(e) {
 
 let formularioMasaF = document.getElementById("formMasaF")
 formularioMasaF.addEventListener("submit", validarMF)
-
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
 
 function masaFuerza(a, b) {
     resultado = parseFloat(a)/parseFloat(b)
@@ -84,10 +78,6 @@ function validarMF(e) {
 
 let formularioFuerza = document.getElementById("formFuerza")
 formularioFuerza.addEventListener("submit", validarF)
-
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
 
 function fuerza(a, b) {
     resultado = parseFloat(a)*parseFloat(b)

@@ -1,22 +1,20 @@
-// --------------------------- primer grado ---------------------------
-
-let formulario = document.getElementById("formulario1")
-formulario.addEventListener("submit", validar)
+// --------------------------- redondeo ---------------------------
 
 function redondear2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
+// --------------------------- primer grado ---------------------------
+
+let formulario = document.getElementById("formulario1")
+formulario.addEventListener("submit", validar)
+
 let operacion = 0
 let resultado = 0
 function ecPrimerGrado(a, b) {
-    if (a == 0) {
-        resultado = "inexistente"
-    } else {
-        operacion = (-b) / a
-        resultado = redondear2(operacion)
+    operacion = (parseFloat(-b)) / parseFloat(a)
+    resultado = redondear2(operacion)
     return resultado;
-    }
 }
 
 let ecuac = document.getElementById("ecL")
@@ -30,7 +28,17 @@ function validar(e) {
     ecPrimerGrado(a,b)
     let bNeg = b*-1
     b >= 0 ?  ecuacion = `La ecuación es: ${a}X + ${b} = 0` : ecuacion = `La ecuación es: ${a}X - ${bNeg} = 0`
-    let resultadoText = `La raíz es: ${resultado}`
+    if ((a == 0) && isNaN(b)) {
+        resultadoText = `No existe raíz y los valores deben ser numéricos`
+        ecuacion = `No es posible calcular la ecuación`
+    } else if (isNaN(a) || isNaN(b)) {
+        resultadoText = `Debe ingresar valores numéricos`
+        ecuacion = `No es posible calcular la ecuación`
+    } else if (a == 0) {
+        resultadoText = `No existe raíz`
+    } else {
+        resultadoText = `La raíz es: ${resultado}`
+    }
     ecuac.innerHTML = `${ecuacion}`;
     result.innerHTML = `${resultadoText}`;
     form.reset()
@@ -41,19 +49,18 @@ function validar(e) {
 let formularioC = document.getElementById("formulario2")
 formularioC.addEventListener("submit", validarC)
 
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
-
 let resultadoC = 0
 function ecSegundoGrado(aC, bC, cC) {
-    if (bC > 0) {
-        x_1 = (-bC - ((bC**2 - 4*aC*cC)**0.5)) / (2.0 * aC);
-        x_2 = (cC / aC) / x_1;
+    let a = parseFloat(aC)
+    let b = parseFloat(bC)
+    let c = parseFloat(cC)
+    if (b > 0) {
+        x_1 = (-b - ((b**2 - 4*a*c)**0.5)) / (2.0 * a);
+        x_2 = (c / a) / x_1;
         resultadoC = [x_1, x_2];
     } else {
-        x_1 = (-bC + ((bC**2 - 4*aC*cC)**0.5)) / (2.0 * aC);
-        x_2 = (cC / aC) / x_1;
+        x_1 = (-b + ((b**2 - 4*a*c)**0.5)) / (2.0 * a);
+        x_2 = (c / a) / x_1;
         resultadoC = [x_1, x_2];
     }
     return resultadoC
@@ -83,8 +90,14 @@ function validarC(e) {
     }
     if ((bC**2 - 4*aC*cC) < 0) {
         resultadoTextC = `No existe solución real`
+    } else if ((aC == 0) && (isNaN(aC) || isNaN(bC) || isNaN(cC))) {
+        resultadoTextC = `La ecuación no es cuadrática y los valores deben ser numéricos`
+        ecuacionC = `No es posible calcular la ecuación`
     } else if (aC == 0) {
         resultadoTextC = `La ecuación no es cuadrática`
+    } else if (isNaN(aC) || isNaN(bC) || isNaN(cC)) {
+        resultadoTextC = `Debe ingresar valores numéricos`
+        ecuacionC = `No es posible calcular la ecuación`
     } else {
         resultadoTextC = `Las raíces son: ${redondear2(resultadoC[0])} y ${redondear2(resultadoC[1])}`
     }

@@ -1,3 +1,9 @@
+// --------------------------- redondeo ---------------------------
+
+function redondear2(a) {
+    return +(Math.round(a + "e+2")  + "e-2");
+}
+
 // --------------------------- suma ---------------------------
 
 let formSuma = document.getElementById("formSuma")
@@ -16,8 +22,9 @@ function validarS(e) {
     let form = e.target
     let a = form.children[0].value
     let b = form.children[2].value
+    let resultadoText = ``
     sumar(a,b)
-    let resultadoText = `El resultado de ${a} + ${b} es ${resultado}`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El resultado de ${a} + ${b} es ${resultado}`
     localStorage.setItem("resultadoGuardadooo", resultadoText)
     let resultadoFinal = localStorage.getItem("resultadoGuardadooo")
     resSuma.innerHTML = `${resultadoFinal}`;
@@ -28,10 +35,6 @@ function validarS(e) {
 
 let formResta = document.getElementById("formResta")
 formResta.addEventListener("submit", validarR)
-
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
 
 let resultadoRed = 0;
 function restar(a, b) {
@@ -47,8 +50,9 @@ function validarR(e) {
     let form = e.target
     let a = form.children[0].value
     let b = form.children[2].value
+    let resultadoText = ``
     restar(a,b)
-    let resultadoText = `El resultado de ${a} - ${b} es ${resultadoRed}`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El resultado de ${a} - ${b} es ${resultadoRed}`
     resResta.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -71,8 +75,9 @@ function validarM(e) {
     let form = e.target
     let a = form.children[0].value
     let b = form.children[2].value
+    let resultadoText = ``
     multiplicar(a,b)
-    let resultadoText = `El resultado de ${a} x ${b} es ${resultado}`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El resultado de ${a} x ${b} es ${resultado}` 
     resMult.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -81,10 +86,6 @@ function validarM(e) {
 
 let formDiv = document.getElementById("formDiv")
 formDiv.addEventListener("submit", validarD)
-
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
 
 let resultadoRedD = 0;
 function dividir(a, b) {
@@ -100,8 +101,9 @@ function validarD(e) {
     let form = e.target
     let a = form.children[0].value
     let b = form.children[2].value
+    let resultadoText = ``
     dividir(a,b)
-    let resultadoText = `El resultado de ${a} / ${b} es ${resultadoRedD}`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El resultado de ${a} / ${b} es ${resultadoRedD}`
     resDiv.innerHTML = `${resultadoText}`;
     form.reset()
 }

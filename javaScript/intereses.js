@@ -27,12 +27,21 @@ function validar(e) {
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
+    let resultadoTe = ``
+    let resultadoTex = ``
+    let resultadoText = ``
     intereses(a,b)
-    let resultadoTe = `Si el precio es ${a} pesos y el interés es de ${b}%`
+    if (isNaN(a) || isNaN(b)) {
+        resultadoTe = `Debe ingresar valores numéricos`
+        resultadoTex = `No es posible calcular el valor agregado`
+        resultadoText = `No es posible calcular el valor final`
+    } else {
+        resultadoTe = `Si el precio es ${a} pesos y el interés es de ${b}%`
+        resultadoTex = `El valor agregado es: ${resRed} pesos`
+        resultadoText = `El valor final es: ${resFinal} pesos`
+    }
     resultI0.innerHTML = `${resultadoTe}`;
-    let resultadoTex = `El valor agregado es: ${resRed} pesos`
     resultI1.innerHTML = `${resultadoTex}`;
-    let resultadoText = `El valor final es: ${resFinal} pesos`
     resultI2.innerHTML = `${resultadoText}`;
     form.reset()
 }

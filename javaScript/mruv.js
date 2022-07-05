@@ -1,11 +1,13 @@
-// --------------------------- velocidad 1 ---------------------------
-
-let formularioVel1 = document.getElementById("formVel1")
-formularioVel1.addEventListener("submit", validarV1)
+// --------------------------- redondeo ---------------------------
 
 function redondear2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
+
+// --------------------------- velocidad 1 ---------------------------
+
+let formularioVel1 = document.getElementById("formVel1")
+formularioVel1.addEventListener("submit", validarV1)
 
 let resultado = 0
 function velocidad1(a, b, c) {
@@ -33,10 +35,6 @@ function validarV1(e) {
 let formularioVel2 = document.getElementById("formVel2")
 formularioVel2.addEventListener("submit", validarV2)
 
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
-
 function velocidad2(a, b, c) {
     resultado = ((parseFloat(a)**2) + (2*parseFloat(b)*parseFloat(c)))**0.5
     resRed = redondear2(resultado)
@@ -61,10 +59,6 @@ function validarV2(e) {
 
 let formularioAcel = document.getElementById("formAcel")
 formularioAcel.addEventListener("submit", validarA)
-
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
 
 function aceleracion(a, b, c) {
     resultado = (parseFloat(b) - parseFloat(a)) / parseFloat(c)
@@ -91,10 +85,6 @@ function validarA(e) {
 let formularioTiempo = document.getElementById("formTiempo")
 formularioTiempo.addEventListener("submit", validarT)
 
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
-
 function tiempo(a, b, c) {
     resultado = (parseFloat(b) - parseFloat(a)) / parseFloat(c)
     resRed = redondear2(resultado)
@@ -119,10 +109,6 @@ function validarT(e) {
 
 let formularioDis1 = document.getElementById("formDis1")
 formularioDis1.addEventListener("submit", validarD1)
-
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
 
 function distancia1(a, b, c) {
     resultado = ((parseFloat(a) + parseFloat(b)) / 2)*(parseFloat(c))
@@ -149,10 +135,6 @@ function validarD1(e) {
 let formularioDis2 = document.getElementById("formDis2")
 formularioDis2.addEventListener("submit", validarD2)
 
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
-
 function distancia2(a, b, c) {
     resultado = (parseFloat(a)*parseFloat(c)) + ((parseFloat(b)*(parseFloat(c)**2))/2)
     resRed = redondear2(resultado)
@@ -178,10 +160,6 @@ function validarD2(e) {
 let formularioDis3 = document.getElementById("formDis3")
 formularioDis3.addEventListener("submit", validarD3)
 
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
-
 function distancia3(a, b, c) {
     resultado = (parseFloat(b)**2 - parseFloat(a)**2) / (2*parseFloat(c))
     resRed = redondear2(resultado)
@@ -206,10 +184,6 @@ function validarD3(e) {
 
 let formularioPos = document.getElementById("formPos")
 formularioPos.addEventListener("submit", validarP)
-
-function redondear2(a) {
-    return +(Math.round(a + "e+2")  + "e-2");
-}
 
 function posicion(a, b, c, d) {
     resultado = parseFloat(a) + (parseFloat(b)*parseFloat(d)) + ((parseFloat(c)*(parseFloat(d)**2))/2)
