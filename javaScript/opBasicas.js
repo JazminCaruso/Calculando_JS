@@ -31,6 +31,26 @@ function validarS(e) {
     form.reset()
 }
 
+// let l = localStorage;
+
+// let sumaA = document.getElementById("sumaA")
+// let sumaB = document.getElementById("sumaB")
+
+// sumaA.addEventListener("focusout", function() {
+//     l.setItem("sa", sumaA.value)
+// })
+
+// sumaB.addEventListener("focusout", function() {
+//     l.setItem("sb", sumaB.value)
+// })
+
+// function recuperarValores() {
+//     sumaA.value = l.getItem("sa")
+//     sumaB.value = l.getItem("sb")
+// }
+
+// document.addEventListener("DOMContentLoaded", recuperarValores)
+
 // --------------------------- resta ---------------------------
 
 let formResta = document.getElementById("formResta")
