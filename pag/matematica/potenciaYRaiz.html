@@ -54,14 +54,18 @@
 
         <table class="calcuMG">
             <tr class="fila">
-                <th class="tituloCalcu">POTENCIA</th>
+                <th class="tituloCalcu">POTENCIA
+                    <div>
+                        <button id="partesPotencia" class="clickme">Partes de la potencia</button>
+                    </div>
+                </th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <form id="formPot" class="row">
-                        <input style="width: 100px;" id="potA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 100px;" id="potA" value="" type="text" class="form-control" placeholder="Base" aria-label="Base">
                         <p style="width: 120px; padding-top: 2%;">elevado a</p>
-                        <input style="width: 100px;" id="potB" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 100px;" id="potB" value="" type="text" class="form-control" placeholder="exponente" aria-label="Exponente">
                         <br>
                         <input type="submit" class="boton" value="Calcular">
                     </form>
@@ -74,15 +78,19 @@
 
         <table class="calcuMG">
             <tr class="fila">
-                <th class="tituloCalcu">RAÍZ</th>
+                <th class="tituloCalcu">RAÍZ
+                    <div>
+                        <button id="partesRaiz" class="clickme">Partes de la raíz</button>
+                    </div>
+                </th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <form id="formRaizG" class="row">
                         <p style="width: 120px; padding-top: 2%;">La raíz</p>
-                        <input style="width: 100px;" id="raizA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 100px;" id="raizA" value="" type="text" class="form-control" placeholder="índice" aria-label="Índice">
                         <p style="width: 60px; padding-top: 2%;">de</p>
-                        <input style="width: 100px;" id="raizB" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 100px;" id="raizB" value="" type="text" class="form-control" placeholder="radicando" aria-label="Radicando">
                         <br>
                         <input type="submit" class="boton" value="Calcular">
                     </form>
@@ -95,6 +103,7 @@
 
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../javaScript/potenciaYRaiz.js"></script>
 
 </body>

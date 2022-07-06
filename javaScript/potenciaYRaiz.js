@@ -53,3 +53,24 @@ function validarRG(e) {
     resRaizG.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+const partesPotencia = document.getElementById("partesPotencia")
+partesPotencia.addEventListener('click', () => {
+    Swal.fire({
+        imageUrl: "../../img/potencia.jpg",
+        imageHeight: 300,
+        imageAlt: 'Partes de la potencia',
+        text: 'En la imagen podes ver los nombres de las partes de la raíz. Ingresa los datos según corresponda',
+        confirmButtonText: "Ok"
+    })
+})
+
+const partesRaiz = document.getElementById("partesRaiz")
+partesRaiz.addEventListener('click', () => {
+    Swal.fire({
+        imageUrl: "../../img/raiz.jpg",
+        imageHeight: 300,
+        imageAlt: 'Partes de la potencia',
+        confirmButtonText: "Ok"
+    })
+})

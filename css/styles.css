@@ -383,3 +383,11 @@ nav {
     width: 30%;
     padding: 1%;
 }
+
+.clickme {
+    text-align: end;
+    background-color:#fad36a;
+    font-size: small;
+    padding-left: 3%;
+    padding-right: 3%;
+}
