@@ -25,9 +25,21 @@ function validarP(e) {
     resultadoText = ``
     potencia(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `${a} elevado a ${b} es ${resultadoRedP}`
+    localStorage.setItem("resultadoPotencia", resultadoText)
     resPot.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStoragePotencia() {
+    if (localStorage.getItem("resultadoPotencia") === null) {
+        resPot.innerHTML = `El resultado es:`
+    } else {
+        let mostrar = localStorage.getItem("resultadoPotencia")
+        resPot.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStoragePotencia()
 
 // --------------------------- raíz ---------------------------
 
@@ -50,9 +62,23 @@ function validarRG(e) {
     resultadoText = ``
     raizG(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La raíz ${a} de ${b} es ${resultadoRed}`
+    localStorage.setItem("resultadoRaiz", resultadoText)
     resRaizG.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageRaiz() {
+    if (localStorage.getItem("resultadoRaiz") === null) {
+        resRaizG.innerHTML = `El resultado es:`
+    } else {
+        let mostrar = localStorage.getItem("resultadoRaiz")
+        resRaizG.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageRaiz()
+
+// --------------------------- sweet alert ---------------------------
 
 const partesPotencia = document.getElementById("partesPotencia")
 partesPotencia.addEventListener('click', () => {
@@ -60,7 +86,7 @@ partesPotencia.addEventListener('click', () => {
         imageUrl: "../../img/potencia.jpg",
         imageHeight: 300,
         imageAlt: 'Partes de la potencia',
-        text: 'En la imagen podes ver los nombres de las partes de la raíz. Ingresa los datos según corresponda',
+        text: 'En la imagen podes ver los nombres de las partes de la potencia. Ingresa los valores según corresponda.',
         confirmButtonText: "Ok"
     })
 })
@@ -71,6 +97,7 @@ partesRaiz.addEventListener('click', () => {
         imageUrl: "../../img/raiz.jpg",
         imageHeight: 300,
         imageAlt: 'Partes de la potencia',
+        text: 'En la imagen podes ver los nombres de las partes de la raíz. Ingresa los valores según corresponda.',
         confirmButtonText: "Ok"
     })
 })

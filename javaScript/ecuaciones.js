@@ -39,10 +39,33 @@ function validar(e) {
     } else {
         resultadoText = `La raíz es: ${resultado}`
     }
+    localStorage.setItem("resultadoEcPG", resultadoText)
+    localStorage.setItem("ecuacionPG", ecuacion)
     ecuac.innerHTML = `${ecuacion}`;
     result.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageEcuacionPG() {
+    if (localStorage.getItem("resultadoEcPG") === null) {
+        result.innerHTML = `La raíz es:`
+    } else {
+        let mostrar = localStorage.getItem("resultadoEcPG")
+        result.innerHTML = `${mostrar}`;
+    }
+}
+
+function obtenerLocalStorageEcuacionPG2() {
+    if (localStorage.getItem("ecuacionPG") === null) {
+        ecuac.innerHTML = `La ecuación es:`
+    } else {
+        let mostrar = localStorage.getItem("ecuacionPG")
+        ecuac.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageEcuacionPG()
+obtenerLocalStorageEcuacionPG2()
 
 // --------------------------- segundo grado ---------------------------
 
@@ -101,7 +124,30 @@ function validarC(e) {
     } else {
         resultadoTextC = `Las raíces son: ${redondear2(resultadoC[0])} y ${redondear2(resultadoC[1])}`
     }
+    localStorage.setItem("resultadoEcSG", resultadoTextC)
+    localStorage.setItem("ecuacionSG", ecuacionC)
     ecuacC.innerHTML = `${ecuacionC}`;
     resultC.innerHTML = `${resultadoTextC}`;
     form.reset()
 }
+
+function obtenerLocalStorageEcuacionSG() {
+    if (localStorage.getItem("resultadoEcSG") === null) {
+        resultC.innerHTML = `Las raíces es:`
+    } else {
+        let mostrar = localStorage.getItem("resultadoEcSG")
+        resultC.innerHTML = `${mostrar}`;
+    }
+}
+
+function obtenerLocalStorageEcuacionSG2() {
+    if (localStorage.getItem("ecuacionSG") === null) {
+        ecuacC.innerHTML = `La ecuación es:`
+    } else {
+        let mostrar = localStorage.getItem("ecuacionSG")
+        ecuacC.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageEcuacionSG()
+obtenerLocalStorageEcuacionSG2()

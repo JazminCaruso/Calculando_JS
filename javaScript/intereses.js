@@ -40,8 +40,42 @@ function validar(e) {
         resultadoTex = `El valor agregado es: ${resRed} pesos`
         resultadoText = `El valor final es: ${resFinal} pesos`
     }
+    localStorage.setItem("datosIntereses", resultadoTe)
+    localStorage.setItem("valorAgregado", resultadoTex)
+    localStorage.setItem("valorFinal", resultadoText)
     resultI0.innerHTML = `${resultadoTe}`;
     resultI1.innerHTML = `${resultadoTex}`;
     resultI2.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageDatos() {
+    if (localStorage.getItem("datosIntereses") === null) {
+        resultI0.innerHTML = ``
+    } else {
+        let mostrar = localStorage.getItem("datosIntereses")
+        resultI0.innerHTML = `${mostrar}`;
+    }
+}
+
+function obtenerLocalStorageValorA() {
+    if (localStorage.getItem("valorAgregado") === null) {
+        resultI1.innerHTML = `El valor agregado es:`
+    } else {
+        let mostrar = localStorage.getItem("valorAgregado")
+        resultI1.innerHTML = `${mostrar}`;
+    }
+}
+
+function obtenerLocalStorageValorF() {
+    if (localStorage.getItem("valorFinal") === null) {
+        resultI2.innerHTML = `El valor final es:`
+    } else {
+        let mostrar = localStorage.getItem("valorFinal")
+        resultI2.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageDatos()
+obtenerLocalStorageValorA()
+obtenerLocalStorageValorF()

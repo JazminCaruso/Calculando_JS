@@ -27,6 +27,18 @@ function validar(e) {
     let resultadoText = ``
     plazoFijo(a,b,c)
     isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `Lo ganado será: ${resRed} pesos`
+    localStorage.setItem("plazoFijo", resultadoText)
     resultPF.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStoragePlazoFijoi() {
+    if (localStorage.getItem("plazoFijo") === null) {
+        resultPF.innerHTML = `Lo ganado será:`
+    } else {
+        let mostrar = localStorage.getItem("plazoFijo")
+        resultPF.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStoragePlazoFijoi()
