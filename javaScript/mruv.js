@@ -24,8 +24,9 @@ function validarV1(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
+    let resultadoText = ``
     velocidad1(a, b, c)
-    let resultadoText = `La velocidad es: ${resRed} m/s`
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La velocidad es: ${resRed} m/s`
     resultV1.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -49,8 +50,9 @@ function validarV2(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
+    let resultadoText = ``
     velocidad2(a, b, c)
-    let resultadoText = `La velocidad es: ${resRed} m/s`
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La velocidad es: ${resRed} m/s`
     resultV2.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -74,8 +76,9 @@ function validarA(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
+    let resultadoText = ``
     aceleracion(a, b, c)
-    let resultadoText = `La aceleración es: ${resRed} m/s²`
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La aceleración es: ${resRed} m/s²`
     resultA.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -99,8 +102,9 @@ function validarT(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
+    let resultadoText = ``
     tiempo(a, b, c)
-    let resultadoText = `El tiempo es: ${resRed} s`
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El tiempo es: ${resRed} s`
     resultT.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -124,8 +128,9 @@ function validarD1(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
+    let resultadoText = ``
     distancia1(a, b, c)
-    let resultadoText = `La distancia es: ${resRed} metros`
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
     resultD1.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -149,8 +154,9 @@ function validarD2(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
+    let resultadoText = ``
     distancia2(a, b, c)
-    let resultadoText = `La distancia es: ${resRed} metros`
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
     resultD2.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -174,8 +180,9 @@ function validarD3(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
+    let resultadoText = ``
     distancia3(a, b, c)
-    let resultadoText = `La distancia es: ${resRed} metros`
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
     resultD3.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -200,8 +207,9 @@ function validarP(e) {
     let b = form.children[4].value
     let c = form.children[7].value
     let d = form.children[10].value
+    let resultadoText = ``
     posicion(a, b, c, d)
-    let resultadoText = `La posición es: ${resRed} metros`
+    isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La posición es: ${resRed} metros`
     resultP.innerHTML = `${resultadoText}`;
     form.reset()
 }

@@ -23,8 +23,9 @@ function validarD(e) {
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
+    let resultadoText = ``
     distancia(a, b)
-    let resultadoText = `La distancia es: ${resRed} metros`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
     resultD.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -48,8 +49,9 @@ function validarDP(e) {
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
+    let resultadoText = ``
     distanciaP(a, b)
-    let resultadoText = `La distancia es: ${resRed} metros`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
     resultDP.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -72,8 +74,9 @@ function validarV(e) {
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
+    let resultadoText = ``
     velocidad(a, b)
-    let resultadoText = `La velocidad es: ${resRed} m/s`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La velocidad es: ${resRed} m/s`
     resultV.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -96,8 +99,9 @@ function validarT(e) {
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
+    let resultadoText = ``
     tiempo(a, b)
-    let resultadoText = `El tiempo es: ${resRed} s`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El tiempo es: ${resRed} s`
     resultT.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -121,8 +125,9 @@ function validarP(e) {
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
+    let resultadoText = ``
     posicion(a, b, c)
-    let resultadoText = `La posición final es: ${resRed} metros`
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La posición final es: ${resRed} metros`
     resultP.innerHTML = `${resultadoText}`;
     form.reset()
 }

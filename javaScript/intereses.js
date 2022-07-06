@@ -33,8 +33,8 @@ function validar(e) {
     intereses(a,b)
     if (isNaN(a) || isNaN(b)) {
         resultadoTe = `Debe ingresar valores numéricos`
-        resultadoTex = `No es posible calcular el valor agregado`
-        resultadoText = `No es posible calcular el valor final`
+        resultadoTex = ``
+        resultadoText = ``
     } else {
         resultadoTe = `Si el precio es ${a} pesos y el interés es de ${b}%`
         resultadoTex = `El valor agregado es: ${resRed} pesos`

@@ -21,8 +21,9 @@ function validarMP(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
+    let resultadoText = ``
     masaPeso(a)
-    let resultadoText = `El valor de la masa es: ${resRed} kg`
+    isNaN(a) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor de la masa es: ${resRed} kg`
     resultMP.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -44,8 +45,9 @@ function validarP(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
+    let resultadoText = ``
     peso(a)
-    let resultadoText = `El valor del peso es: ${resRed} N`
+    isNaN(a) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor del peso es: ${resRed} N`
     resultP.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -68,8 +70,9 @@ function validarMF(e) {
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
+    let resultadoText = ``
     masaFuerza(a, b)
-    let resultadoText = `El valor de la masa es: ${resRed} kg`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor de la masa es: ${resRed} kg`
     resultMF.innerHTML = `${resultadoText}`;
     form.reset()
 }
@@ -92,8 +95,9 @@ function validarF(e) {
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
+    let resultadoText = ``
     fuerza(a, b)
-    let resultadoText = `El valor de la fuerza es: ${resRed} N`
+    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor de la fuerza es: ${resRed} N`
     resultF.innerHTML = `${resultadoText}`;
     form.reset()
 }
