@@ -373,8 +373,7 @@ nav {
 
 .boton {
     background-color: #fad36a;
-    border: 4px solid;
-    border-color: white;
+    border: 1px outset;
     font-weight: bold;
     font-size: medium;
     margin-top: 2%;
@@ -382,12 +381,16 @@ nav {
     padding-right: 5%;
     width: 30%;
     padding: 1%;
+    margin-left: 5% auto;
 }
 
 .clickme {
     text-align: end;
-    background-color:#fad36a;
+    background-color: rgb(235, 233, 233);
     font-size: small;
     padding-left: 3%;
     padding-right: 3%;
+    border-style: none;
+    border: 0.5px groove;
+    color: #1d545c;
 }

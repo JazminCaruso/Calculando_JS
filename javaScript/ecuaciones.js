@@ -133,7 +133,7 @@ function validarC(e) {
 
 function obtenerLocalStorageEcuacionSG() {
     if (localStorage.getItem("resultadoEcSG") === null) {
-        resultC.innerHTML = `Las raíces es:`
+        resultC.innerHTML = `Las raíces son:`
     } else {
         let mostrar = localStorage.getItem("resultadoEcSG")
         resultC.innerHTML = `${mostrar}`;
@@ -151,3 +151,29 @@ function obtenerLocalStorageEcuacionSG2() {
 
 obtenerLocalStorageEcuacionSG()
 obtenerLocalStorageEcuacionSG2()
+
+// --------------------------- sweet alert ---------------------------
+
+const partesEcuacionPG = document.getElementById("partesEcuacionPG")
+partesEcuacionPG.addEventListener('click', () => {
+    Swal.fire({
+        imageUrl: "../../img/ecuacionPG.jpg",
+        imageHeight: 300,
+        imageAlt: 'Partes de la ecuación lineal',
+        title: 'Partes de la ecuación lineal',
+        text: 'El coeficiente lineal es el número que está multiplicado por la incógnita. El término independiente no se encuentra acompañado por la incógnita. Ingresa los valores (números) según corresponda.',
+        confirmButtonText: "Ok"
+    })
+})
+
+const partesEcuacionSG = document.getElementById("partesEcuacionSG")
+partesEcuacionSG.addEventListener('click', () => {
+    Swal.fire({
+        imageUrl: "../../img/ecuacionSG.jpg",
+        imageHeight: 300,
+        imageAlt: 'Partes de la potencia',
+        title: 'Partes de la ecuación cuadrática',
+        text: 'El coeficiente cuadrático es el número que está multiplicado por la incógnita elevada al cuadrado. El coeficiente lineal es el número que está multiplicado por la incógnita. El término independiente no se encuentra acompañado por la incógnita. Ingresa los valores (números) según corresponda.',
+        confirmButtonText: "Ok"
+    })
+})

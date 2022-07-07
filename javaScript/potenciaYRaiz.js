@@ -20,8 +20,8 @@ let resPot = document.getElementById("resPot")
 function validarP(e) {
     e.preventDefault()
     let form = e.target
-    let a = form.children[0].value
-    let b = form.children[2].value
+    let a = form.children[1].value
+    let b = form.children[4].value
     resultadoText = ``
     potencia(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `${a} elevado a ${b} es ${resultadoRedP}`
@@ -58,7 +58,7 @@ function validarRG(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
-    let b = form.children[3].value
+    let b = form.children[4].value
     resultadoText = ``
     raizG(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La raíz ${a} de ${b} es ${resultadoRed}`
@@ -86,7 +86,8 @@ partesPotencia.addEventListener('click', () => {
         imageUrl: "../../img/potencia.jpg",
         imageHeight: 300,
         imageAlt: 'Partes de la potencia',
-        text: 'En la imagen podes ver los nombres de las partes de la potencia. Ingresa los valores según corresponda.',
+        title: 'Partes de la potencia',
+        text: 'La base es el número que se quiere multiplicar. El exponente es el número que indica la cantidad de veces que va a realizarse la multiplicación. Ingresa los valores (números) en el cuadro de la calculadora según corresponda.',
         confirmButtonText: "Ok"
     })
 })
@@ -97,7 +98,8 @@ partesRaiz.addEventListener('click', () => {
         imageUrl: "../../img/raiz.jpg",
         imageHeight: 300,
         imageAlt: 'Partes de la potencia',
-        text: 'En la imagen podes ver los nombres de las partes de la raíz. Ingresa los valores según corresponda.',
+        title: 'Partes de la raíz',
+        text: 'El índice es el número que indica el grado de la raíz. El radicando es el número del cual se extrae la raíz. Ingresa los valores (números) en el cuadro de la calculadora según corresponda.',
         confirmButtonText: "Ok"
     })
 })

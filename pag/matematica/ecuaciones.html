@@ -52,9 +52,13 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <table class="calcuMG">
+        <table class="calcuM">
             <tr class="fila">
-                <th class="tituloCalcu">PRIMER GRADO / LINEAL</th>
+                <th class="tituloCalcu">PRIMER GRADO / LINEAL
+                    <div>
+                        <button id="partesEcuacionPG" class="clickme">¿Cómo funciona?</button>
+                    </div>
+                </th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
@@ -66,7 +70,7 @@
                             <label for="input2" class="input">Término independiente:</label>
                             <input id="input2" class="input" type="text">
                             <br>
-                            <input type="submit" class="boton" value="Enviar">
+                            <input type="submit" class="boton" value="Calcular">
                         </form>
                     </div>
                 </th>
@@ -79,9 +83,13 @@
             </tr>
         </table>
 
-        <table class="calcuMG">
+        <table class="calcuM">
             <tr class="fila">
-                <th class="tituloCalcu">SEGUNDO GRADO / CUADRÁTICA</th>
+                <th class="tituloCalcu">SEGUNDO GRADO / CUADRÁTICA
+                    <div>
+                        <button id="partesEcuacionSG" class="clickme">¿Cómo funciona?</button>
+                    </div>
+                </th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
@@ -96,7 +104,7 @@
                             <label for="input5" class="input">Término independiente:</label>
                             <input id="input5" class="input" type="text">
                             <br>
-                            <input type="submit" class="boton" value="Enviar">
+                            <input type="submit" class="boton" value="Calcular">
                         </form>
                     </div>
                 </th>
@@ -111,6 +119,7 @@
 
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../javaScript/ecuaciones.js"></script>
 
 </body>

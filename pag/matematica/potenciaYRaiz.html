@@ -52,7 +52,7 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        <table class="calcuMG">
+        <table class="calcuM">
             <tr class="fila">
                 <th class="tituloCalcu">POTENCIA
                     <div>
@@ -62,13 +62,17 @@
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
-                    <form id="formPot" class="row">
-                        <input style="width: 100px;" id="potA" value="" type="text" class="form-control" placeholder="Base" aria-label="Base">
-                        <p style="width: 120px; padding-top: 2%;">elevado a</p>
-                        <input style="width: 100px;" id="potB" value="" type="text" class="form-control" placeholder="exponente" aria-label="Exponente">
-                        <br>
-                        <input type="submit" class="boton" value="Calcular">
-                    </form>
+                    <div class="row">
+                        <form id="formPot" class="formulario">
+                            <label for="potA" class="input">Base:</label>
+                            <input id="potA" class="input" type="text">
+                            <br>
+                            <label for="potB" class="input">Exponente:</label>
+                            <input id="potB" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
+                    </div>
                 </th>
             </tr>
             <tr>
@@ -76,7 +80,7 @@
             </tr>
         </table>
 
-        <table class="calcuMG">
+        <table class="calcuM">
             <tr class="fila">
                 <th class="tituloCalcu">RAÍZ
                     <div>
@@ -86,14 +90,17 @@
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
-                    <form id="formRaizG" class="row">
-                        <p style="width: 120px; padding-top: 2%;">La raíz</p>
-                        <input style="width: 100px;" id="base" value="" type="text" class="form-control" placeholder="índice" aria-label="Índice">
-                        <p style="width: 60px; padding-top: 2%;">de</p>
-                        <input style="width: 100px;" id="exponente" value="" type="text" class="form-control" placeholder="radicando" aria-label="Radicando">
-                        <br>
-                        <input type="submit" class="boton" value="Calcular">
-                    </form>
+                    <div class="row">
+                        <form id="formRaizG" class="formulario">
+                            <label for="indice" class="input">Índice:</label>
+                            <input id="indice" class="input" type="text">
+                            <br>
+                            <label for="radicando class="input">Radicando:</label>
+                            <input id="radicando" class="input" type="text">
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
+                    </div>
                 </th>
             </tr>
             <tr>
