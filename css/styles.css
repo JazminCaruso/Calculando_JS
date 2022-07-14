@@ -394,3 +394,10 @@ nav {
     border: 0.5px groove;
     color: #1d545c;
 }
+
+.listaDolar {
+    background-color: rgb(202, 202, 202);
+    padding: 1%;
+    color: #1d545c;
+    text-align: center;
+}
