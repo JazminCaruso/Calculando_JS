@@ -27,9 +27,21 @@ function validarV1(e) {
     let resultadoText = ``
     velocidad1(a, b, c)
     isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La velocidad es: ${resRed} m/s`
+    localStorage.setItem("valorV1", resultadoText)
     resultV1.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageV1() {
+    if (localStorage.getItem("valorV1") === null) {
+        resultV1.innerHTML = `La velocidad es:`
+    } else {
+        let mostrar = localStorage.getItem("valorV1")
+        resultV1.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageV1()
 
 // --------------------------- velocidad 2 ---------------------------
 
@@ -53,9 +65,21 @@ function validarV2(e) {
     let resultadoText = ``
     velocidad2(a, b, c)
     isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La velocidad es: ${resRed} m/s`
+    localStorage.setItem("valorV2", resultadoText)
     resultV2.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageV2() {
+    if (localStorage.getItem("valorV2") === null) {
+        resultV2.innerHTML = `La velocidad es:`
+    } else {
+        let mostrar = localStorage.getItem("valorV2")
+        resultV2.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageV2()
 
 // --------------------------- aceleración ---------------------------
 
@@ -79,9 +103,21 @@ function validarA(e) {
     let resultadoText = ``
     aceleracion(a, b, c)
     isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La aceleración es: ${resRed} m/s²`
+    localStorage.setItem("valorA", resultadoText)
     resultA.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageA() {
+    if (localStorage.getItem("valorA") === null) {
+        resultA.innerHTML = `La aceleración es:`
+    } else {
+        let mostrar = localStorage.getItem("valorA")
+        resultA.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageA()
 
 // --------------------------- tiempo ---------------------------
 
@@ -105,9 +141,21 @@ function validarT(e) {
     let resultadoText = ``
     tiempo(a, b, c)
     isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El tiempo es: ${resRed} s`
+    localStorage.setItem("valorT", resultadoText)
     resultT.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageT() {
+    if (localStorage.getItem("valorT") === null) {
+        resultT.innerHTML = `El tiempo es:`
+    } else {
+        let mostrar = localStorage.getItem("valorT")
+        resultT.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageT()
 
 // --------------------------- distancia 1 ---------------------------
 
@@ -131,9 +179,21 @@ function validarD1(e) {
     let resultadoText = ``
     distancia1(a, b, c)
     isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
+    localStorage.setItem("valorD1", resultadoText)
     resultD1.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageD1() {
+    if (localStorage.getItem("valorD1") === null) {
+        resultD1.innerHTML = `La distancia es:`
+    } else {
+        let mostrar = localStorage.getItem("valorD1")
+        resultD1.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageD1()
 
 // --------------------------- distancia 2 ---------------------------
 
@@ -157,9 +217,21 @@ function validarD2(e) {
     let resultadoText = ``
     distancia2(a, b, c)
     isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
+    localStorage.setItem("valorD2", resultadoText)
     resultD2.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageD2() {
+    if (localStorage.getItem("valorD2") === null) {
+        resultD2.innerHTML = `La distancia es:`
+    } else {
+        let mostrar = localStorage.getItem("valorD2")
+        resultD2.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageD2()
 
 // --------------------------- distancia 3 ---------------------------
 
@@ -183,9 +255,21 @@ function validarD3(e) {
     let resultadoText = ``
     distancia3(a, b, c)
     isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
+    localStorage.setItem("valorD3", resultadoText)
     resultD3.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageD3() {
+    if (localStorage.getItem("valorD3") === null) {
+        resultD3.innerHTML = `La distancia es:`
+    } else {
+        let mostrar = localStorage.getItem("valorD3")
+        resultD3.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageD3()
 
 // --------------------------- posicion ---------------------------
 
@@ -210,6 +294,18 @@ function validarP(e) {
     let resultadoText = ``
     posicion(a, b, c, d)
     isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La posición es: ${resRed} metros`
+    localStorage.setItem("valorP", resultadoText)
     resultP.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageP() {
+    if (localStorage.getItem("valorP") === null) {
+        resultP.innerHTML = `La posición es:`
+    } else {
+        let mostrar = localStorage.getItem("valorP")
+        resultP.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageP()

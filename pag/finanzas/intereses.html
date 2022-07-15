@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../../css/styles.css">
-    <title>Document</title>
+    <title>CALCULANDO | Intereses</title>
 </head>
 <body class="letra">
 
@@ -36,6 +36,7 @@
                     <ul class="menu-vertical">
                         <li><a href="./intereses.html">Intereses</a></li>
                         <li><a href="./plazofijo.html">Plazo fijo</a></li>
+                        <li><a href="./conversorDolar.html">Conversor dolar</a></li>
                     </ul>
                 </li>
                 <li>
@@ -43,7 +44,6 @@
                     <ul class="menu-vertical">
                         <li><a href="../fisica/estatica.html">Estática</a></li>
                         <li><a href="../fisica/cinematica.html">Cinemática</a></li>
-                        <li><a href="../fisica/conversor.html">Conversor</a></li>
                     </ul>
                 </li>
             </ul>
@@ -61,12 +61,12 @@
                     <div class="row">
                         <form id="formularioInt" class="formulario">
                             <label for="input48" class="input">Precio:</label>
-                            <input id="input48" class="input" type="text">
+                            <input id="input48" class="input" type="text" required>
                             <br>
-                            <label for="input49" class="input">Interés (%):</label>
-                            <input id="input49" class="input" type="text">
+                            <label for="input49" class="input">Tasa de interés:</label>
+                            <input id="input49" class="input" type="text" required>
                             <br>
-                            <input type="submit" class="boton" value="Enviar">
+                            <input type="submit" class="boton" value="Calcular">
                         </form>
                     </div>
                 </th>
@@ -75,10 +75,10 @@
                 <th id="resI0" class="resultadoCalcu"></th>
             </tr>
             <tr>
-                <th id="resI1" class="resultadoCalcu">El valor agregado es:</th>
+                <th id="resI1" class="resultadoCalcu">El interés es:</th>
             </tr>
             <tr>
-                <th id="resI2" class="resultadoCalcu">El valor final es:</th>
+                <th id="resI2" class="resultadoCalcu">El precio final es:</th>
             </tr>
         </table>
         

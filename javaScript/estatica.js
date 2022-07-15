@@ -24,9 +24,21 @@ function validarMP(e) {
     let resultadoText = ``
     masaPeso(a)
     isNaN(a) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor de la masa es: ${resRed} kg`
+    localStorage.setItem("valorMP", resultadoText)
     resultMP.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageMP() {
+    if (localStorage.getItem("valorMP") === null) {
+        resultMP.innerHTML = `El valor de la masa es:`
+    } else {
+        let mostrar = localStorage.getItem("valorMP")
+        resultMP.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageMP()
 
 // --------------------------- peso  ---------------------------
 
@@ -48,9 +60,21 @@ function validarP(e) {
     let resultadoText = ``
     peso(a)
     isNaN(a) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor del peso es: ${resRed} N`
+    localStorage.setItem("valorP", resultadoText)
     resultP.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageP() {
+    if (localStorage.getItem("valorP") === null) {
+        resultP.innerHTML = `El valor del peso es:`
+    } else {
+        let mostrar = localStorage.getItem("valorP")
+        resultP.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageP()
 
 // --------------------------- masa según fuerza  ---------------------------
 
@@ -73,9 +97,21 @@ function validarMF(e) {
     let resultadoText = ``
     masaFuerza(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor de la masa es: ${resRed} kg`
+    localStorage.setItem("valorMF", resultadoText)
     resultMF.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageMF() {
+    if (localStorage.getItem("valorMF") === null) {
+        resultMF.innerHTML = `El valor de la masa es:`
+    } else {
+        let mostrar = localStorage.getItem("valorMF")
+        resultMF.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageMF()
 
 // --------------------------- fuerza  ---------------------------
 
@@ -98,6 +134,18 @@ function validarF(e) {
     let resultadoText = ``
     fuerza(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor de la fuerza es: ${resRed} N`
+    localStorage.setItem("valorF", resultadoText)
     resultF.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageF() {
+    if (localStorage.getItem("valorF") === null) {
+        resultF.innerHTML = `El valor de la fuerza es:`
+    } else {
+        let mostrar = localStorage.getItem("valorF")
+        resultF.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageF()

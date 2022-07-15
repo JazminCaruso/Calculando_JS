@@ -26,9 +26,21 @@ function validarD(e) {
     let resultadoText = ``
     distancia(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
+    localStorage.setItem("valorD", resultadoText)
     resultD.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageD() {
+    if (localStorage.getItem("valorD") === null) {
+        resultD.innerHTML = `La distancia es:`
+    } else {
+        let mostrar = localStorage.getItem("valorD")
+        resultD.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageD()
 
 // --------------------------- distancia según posición  ---------------------------
 
@@ -52,9 +64,21 @@ function validarDP(e) {
     let resultadoText = ``
     distanciaP(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
+    localStorage.setItem("valorDP", resultadoText)
     resultDP.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageDP() {
+    if (localStorage.getItem("valorDP") === null) {
+        resultDP.innerHTML = `La distancia es:`
+    } else {
+        let mostrar = localStorage.getItem("valorDP")
+        resultDP.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageDP()
 
 // --------------------------- velocidad  ---------------------------
 
@@ -77,9 +101,21 @@ function validarV(e) {
     let resultadoText = ``
     velocidad(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La velocidad es: ${resRed} m/s`
+    localStorage.setItem("valorV", resultadoText)
     resultV.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageV() {
+    if (localStorage.getItem("valorV") === null) {
+        resultV.innerHTML = `La velocidad es:`
+    } else {
+        let mostrar = localStorage.getItem("valorV")
+        resultV.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageV()
 
 // --------------------------- tiempo  ---------------------------
 
@@ -102,9 +138,21 @@ function validarT(e) {
     let resultadoText = ``
     tiempo(a, b)
     isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El tiempo es: ${resRed} s`
+    localStorage.setItem("valorT", resultadoText)
     resultT.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageT() {
+    if (localStorage.getItem("valorT") === null) {
+        resultT.innerHTML = `El tiempo es:`
+    } else {
+        let mostrar = localStorage.getItem("valorT")
+        resultT.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageT()
 
 // --------------------------- posición ---------------------------
 
@@ -128,6 +176,18 @@ function validarP(e) {
     let resultadoText = ``
     posicion(a, b, c)
     isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La posición final es: ${resRed} metros`
+    localStorage.setItem("valorP", resultadoText)
     resultP.innerHTML = `${resultadoText}`;
     form.reset()
 }
+
+function obtenerLocalStorageP() {
+    if (localStorage.getItem("valorP") === null) {
+        resultP.innerHTML = `La posición final es:`
+    } else {
+        let mostrar = localStorage.getItem("valorP")
+        resultP.innerHTML = `${mostrar}`;
+    }
+}
+
+obtenerLocalStorageP()

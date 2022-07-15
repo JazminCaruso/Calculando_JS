@@ -36,9 +36,9 @@ function validar(e) {
         resultadoTex = ``
         resultadoText = ``
     } else {
-        resultadoTe = `Si el precio es ${a} pesos y el interés es de ${b}%`
-        resultadoTex = `El valor agregado es: ${resRed} pesos`
-        resultadoText = `El valor final es: ${resFinal} pesos`
+        resultadoTe = `Si el precio es ${a} pesos y la tasa de interés es ${b}`
+        resultadoTex = `El interés es: ${resRed}`
+        resultadoText = `El precio final es: ${resFinal} pesos`
     }
     localStorage.setItem("datosIntereses", resultadoTe)
     localStorage.setItem("valorAgregado", resultadoTex)

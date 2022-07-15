@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../../css/styles.css">
-    <title>Document</title>
+    <title>CALCULANDO | Conversor dolar</title>
 </head>
 <body class="letra">
 
@@ -36,6 +36,7 @@
                     <ul class="menu-vertical">
                         <li><a href="./intereses.html">Intereses</a></li>
                         <li><a href="./plazofijo.html">Plazo fijo</a></li>
+                        <li><a href="./conversorDolar.html">Conversor dolar</a></li>
                     </ul>
                 </li>
                 <li>
@@ -43,7 +44,6 @@
                     <ul class="menu-vertical">
                         <li><a href="../fisica/estatica.html">Estática</a></li>
                         <li><a href="../fisica/cinematica.html">Cinemática</a></li>
-                        <li><a href="../fisica/conversor.html">Conversor</a></li>
                     </ul>
                 </li>
             </ul>
@@ -54,45 +54,23 @@
 
     <section class="seccionCalcu fondoSesiones">
 
-        
-
         <table class="calcuM">
             <tr class="fila">
-                <th class="tituloCalcu">CONVERSOR PESO-DOLAR</th>
-            </tr>
-            <tr>
-                <th class="cuadroOperaciones">
-                    <div class="row">
-                        <form id="formularioInt" class="formulario">
-                            <label for="cantPesos" class="input">Pesos:</label>
-                            <input id="cantPesos" class="input" type="text">
-                            <br>
-                            <label for="valorDolar1" class="input">Valor del dolar:</label>
-                            <input id="valorDolar1" class="input" type="text">
-                            <br>
-                            <input type="submit" class="boton" value="Enviar">
-                        </form>
+                <th class="tituloCalcu">CONVERSOR PESO-DOLAR
+                    <div>
+                        <button id="explicacionConversorPD" class="clickme">¿Cómo funciona?</button>
                     </div>
                 </th>
             </tr>
             <tr>
-                <th id="respuestaConversorPesoDolar" class="resultadoCalcu"></th>
-            </tr>
-        </table>
-
-        <table class="calcuM">
-            <tr class="fila">
-                <th class="tituloCalcu">CONVERSOR DOLAR-PESO</th>
-            </tr>
-            <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
-                        <form id="formularioInt" class="formulario">
-                            <label for="cantDolares" class="input">Dólares:</label>
-                            <input id="cantDolares" class="input" type="text">
+                        <form id="formularioConversorPesoDolar" class="formulario">
+                            <label for="cantPesos" class="input">Pesos:</label>
+                            <input id="cantPesos" class="input" type="text" required>
                             <br>
-                            <label for="valorDolar2" class="input">Valor del dólar:</label>
-                            <input id="valorDolar2" class="input" type="text">
+                            <label for="valorDolar1" class="input">Valor del dolar:</label>
+                            <input id="valorDolar1" class="input" type="text" required>
                             <br>
                             <input type="submit" class="boton" value="Calcular">
                         </form>
@@ -100,13 +78,42 @@
                 </th>
             </tr>
             <tr>
-                <th id="respuestaConversorDolarPeso" class="resultadoCalcu"></th>
+                <th id="resultadoConversorPesoDolar" class="resultadoCalcu"></th>
+            </tr>
+        </table>
+
+        <table class="calcuM">
+            <tr class="fila">
+                <th class="tituloCalcu">CONVERSOR DOLAR-PESO
+                    <div>
+                        <button id="explicacionConversorDP" class="clickme">¿Cómo funciona?</button>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th class="cuadroOperaciones">
+                    <div class="row">
+                        <form id="formularioConversorDolarPeso" class="formulario">
+                            <label for="cantDolares" class="input">Dólares:</label>
+                            <input id="cantDolares" class="input" type="text" required>
+                            <br>
+                            <label for="valorDolar2" class="input">Valor del dolar:</label>
+                            <input id="valorDolar2" class="input" type="text" required>
+                            <br>
+                            <input type="submit" class="boton" value="Calcular">
+                        </form>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th id="resultadoConversorDolarPeso" class="resultadoCalcu"></th>
             </tr>
         </table>
         
     </section>
 
-    <script src="../../javaScript/fetch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../javaScript/conversorDolar.js"></script>
 
 </body>
 </html>

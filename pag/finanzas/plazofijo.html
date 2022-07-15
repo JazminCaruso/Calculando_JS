@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../../css/styles.css">
-    <title>Document</title>
+    <title>CALCULANDO | Plazo fijo</title>
 </head>
 <body class="letra">
 
@@ -36,6 +36,7 @@
                     <ul class="menu-vertical">
                         <li><a href="./intereses.html">Intereses</a></li>
                         <li><a href="./plazoFijo.html">Plazo fijo</a></li>
+                        <li><a href="./conversorDolar.html">Conversor dolar</a></li>
                     </ul>
                 </li>
                 <li>
@@ -43,7 +44,6 @@
                     <ul class="menu-vertical">
                         <li><a href="../fisica/estatica.html">Estática</a></li>
                         <li><a href="../fisica/cinematica.html">Cinemática</a></li>
-                        <li><a href="../fisica/conversor.html">Conversor</a></li>
                     </ul>
                 </li>
             </ul>
@@ -54,22 +54,26 @@
 
         <table class="calcuM">
             <tr class="fila">
-                <th class="tituloCalcu">SIMULADOR DE PLAZO FIJO</th>
+                <th class="tituloCalcu">SIMULADOR DE PLAZO FIJO
+                    <div>
+                        <button id="explicacionPlazoFijo" class="clickme">¿Cómo funciona?</button>
+                    </div>
+                </th>
             </tr>
             <tr>
                 <th class="cuadroOperaciones">
                     <div class="row">
                         <form id="formularioPF" class="formulario">
                             <label for="input50" class="input">Monto inicial:</label>
-                            <input id="input50" class="input" type="text">
+                            <input id="input50" class="input" type="text" required>
                             <br>
                             <label for="input51" class="input">Cantidad de días:</label>
-                            <input id="input51" class="input" type="text">
+                            <input id="input51" class="input" type="text" required>
                             <br>
-                            <label for="input52" class="input">Tasa nominal:</label>
-                            <input id="input52" class="input" type="text">
+                            <label for="input52" class="input">Tasa nominal anual:</label>
+                            <input id="input52" class="input" type="text" required>
                             <br>
-                            <input type="submit" class="boton" value="Enviar">
+                            <input type="submit" class="boton" value="Calcular">
                         </form>
                     </div>
                 </th>
@@ -81,6 +85,7 @@
         
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../javaScript/plazoFijo.js"></script>
 
 </body>

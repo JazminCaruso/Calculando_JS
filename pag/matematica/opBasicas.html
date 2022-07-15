@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../../css/styles.css">
-    <title>Document</title>
+    <title>CALCULANDO | Operaciones básicas</title>
 </head>
 <body class="letra">
 
@@ -36,6 +36,7 @@
                     <ul class="menu-vertical">
                         <li><a href="../finanzas/intereses.html">Intereses</a></li>
                         <li><a href="../finanzas/plazofijo.html">Plazo fijo</a></li>
+                        <li><a href="../finanzas/conversorDolar.html">Conversor dolar</a></li>
                     </ul>
                 </li>
                 <li>
@@ -43,7 +44,6 @@
                     <ul class="menu-vertical">
                         <li><a href="../fisica/estatica.html">Estática</a></li>
                         <li><a href="../fisica/cinematica.html">Cinemática</a></li>
-                        <li><a href="../fisica/conversor.html">Conversor</a></li>
                     </ul>
                 </li>
             </ul>
@@ -59,9 +59,9 @@
             <tr>
                 <th class="cuadroOperaciones">
                     <form id="formSuma" class="row">
-                        <input style="width: 120px;" id="sumaA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 120px;" id="sumaA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num" required>
                         <p style="width: 35px; padding-top: 2%;">+</p>
-                        <input style="width: 120px;" id="sumaB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 120px;" id="sumaB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num" required>
                         <br>
                         <input type="submit" class="boton" value="Calcular">
                     </form>
@@ -79,9 +79,9 @@
             <tr>
                 <th class="cuadroOperaciones">
                     <form id="formResta" class="row">
-                        <input style="width: 120px;" id="restaA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 120px;" id="restaA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num" required>
                         <p style="width: 35px; padding-top: 2%;">-</p>
-                        <input style="width: 120px;" id="restaB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 120px;" id="restaB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num" required>
                         <br>
                         <input type="submit" class="boton" value="Calcular">
                     </form>
@@ -99,9 +99,9 @@
             <tr>
                 <th class="cuadroOperaciones">
                     <form id="formMult" class="row">
-                        <input style="width: 120px;" id="multA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 120px;" id="multA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num" required>
                         <p style="width: 35px; padding-top: 2%;">x</p>
-                        <input style="width: 120px;" id="multB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 120px;" id="multB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num" required>
                         <br>
                         <input type="submit" class="boton" value="Calcular">
                     </form>
@@ -119,9 +119,9 @@
             <tr>
                 <th class="cuadroOperaciones">
                     <form id="formDiv" class="row">
-                        <input style="width: 120px;" id="divA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 120px;" id="divA" value="" type="text" class="form-control" placeholder="Num" aria-label="Num" required>
                         <p style="width: 35px; padding-top: 2%;">/</p>
-                        <input style="width: 120px;" id="divB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num">
+                        <input style="width: 120px;" id="divB" value=""type="text" class="form-control" placeholder="Num" aria-label="Num" required>
                         <br>
                         <input type="submit" class="boton" value="Calcular">
                     </form>

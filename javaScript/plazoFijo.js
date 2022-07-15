@@ -42,3 +42,13 @@ function obtenerLocalStoragePlazoFijoi() {
 }
 
 obtenerLocalStoragePlazoFijoi()
+
+// --------------------------- sweet alert ---------------------------
+
+const explicacionPlazoFijo = document.getElementById("explicacionPlazoFijo")
+explicacionPlazoFijo.addEventListener('click', () => {
+    Swal.fire({
+        text: 'Ingrese el monto a invertir, el plazo (cantidad de días que dejarás el dinero depositado) y la tasa de interés anual, así obtendrá el rendimiento o interés ganado.',
+        confirmButtonText: "Ok"
+    })
+})
