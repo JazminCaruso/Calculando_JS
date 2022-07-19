@@ -1,4 +1,4 @@
-const lista = document.getElementById('listaDolar')
+const list = document.getElementById('listDolar')
 
 fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
     .then((response) => response.json())
@@ -11,7 +11,7 @@ fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
                         Dolar Blue compra: ${data[1].casa.compra}  |
                         Dolar Blue venta: ${data[1].casa.venta}
         `
-        lista.append(dolar)
+        list.append(dolar)
     })
     .catch(() => {
         const err = document.createElement('div')
@@ -19,110 +19,110 @@ fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
         err.innerHTML = `
                         No es posible acceder a los valores del dolar en este momento
         `
-        lista.append(err)
+        list.append(err)
     })
 
 // --------------------------- conversor de peso a dolar ---------------------------
 
-let formularioConvPD = document.getElementById("formularioConversorPesoDolar")
-formularioConvPD.addEventListener("submit", validarPD)
+let formConverterPesoDolar = document.getElementById("formConverterPesoDolar")
+formConverterPesoDolar.addEventListener("submit", validateConverterPesoDolar)
 
-function redondear2(a) {
+function roundTo2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
-let resultado = 0
-let resultadoRedondeado = 0
+let result = 0
+let roundedResult = 0
 
-function pesoDolar(a, b) {
-    resultado = parseFloat(a)/parseFloat(b)
-    resultadoRedondeado = redondear2(resultado)
-    return resultadoRedondeado;
+function converterPesoDolar(a, b) {
+    result = parseFloat(a)/parseFloat(b)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultadoConversorPesoDolar = document.getElementById("resultadoConversorPesoDolar")
+let resultConverterPesoDolar = document.getElementById("resultConverterPesoDolar")
 
-function validarPD(e) {
+function validateConverterPesoDolar(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
-    let resultadoPesoDolar = ``
-    pesoDolar(a,b)
+    let resultPesoDolar = ``
+    converterPesoDolar(a,b)
     if (isNaN(a) || isNaN(b)) {
-        resultadoPesoDolar = `Debe ingresar valores numéricos`
+        resultPesoDolar = `Debe ingresar valores numéricos`
     } else {
-        resultadoPesoDolar = `${a} pesos a ${b} son ${resultadoRedondeado} dólares`
+        resultPesoDolar = `${a} pesos a ${b} son ${roundedResult} dólares`
     }
-    localStorage.setItem("valorConvertidoPD", resultadoPesoDolar)
-    resultadoConversorPesoDolar.innerHTML = `${resultadoPesoDolar}`;
+    localStorage.setItem("valuePesoDolar", resultPesoDolar)
+    resultConverterPesoDolar.innerHTML = `${resultPesoDolar}`;
     form.reset()
 }
 
-function obtenerLocalStoragePesoDolar() {
-    if (localStorage.getItem("valorConvertidoPD") === null) {
-        resultadoConversorPesoDolar.innerHTML = ``
+function getLocalStoragePesoDolar() {
+    if (localStorage.getItem("valuePesoDolar") === null) {
+        resultConverterPesoDolar.innerHTML = ``
     } else {
-        let mostrar = localStorage.getItem("valorConvertidoPD")
-        resultadoConversorPesoDolar.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("valuePesoDolar")
+        resultConverterPesoDolar.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStoragePesoDolar()
+getLocalStoragePesoDolar()
 
 // --------------------------- conversor de dolar a peso ---------------------------
 
-let formularioConvDP = document.getElementById("formularioConversorDolarPeso")
-formularioConvDP.addEventListener("submit", validarDP)
+let formConverterDolarPeso = document.getElementById("formConverterDolarPeso")
+formConverterDolarPeso.addEventListener("submit", validateConverterDolarPeso)
 
-function dolarPeso(a, b) {
-    resultado = parseFloat(a)*parseFloat(b)
-    resultadoRedondeado = redondear2(resultado)
-    return resultadoRedondeado;
+function converterDolarPeso(a, b) {
+    result = parseFloat(a)*parseFloat(b)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultadoConversorDolarPeso = document.getElementById("resultadoConversorDolarPeso")
+let resultConverterDolarPeso = document.getElementById("resultConverterDolarPeso")
 
-function validarDP(e) {
+function validateConverterDolarPeso(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
-    let resultadoPesoDolar = ``
-    dolarPeso(a,b)
+    let resultDolarPeso = ``
+    converterDolarPeso(a,b)
     if (isNaN(a) || isNaN(b)) {
-        resultadoDolarPeso = `Debe ingresar valores numéricos`
+        resultDolarPeso = `Debe ingresar valores numéricos`
     } else {
-        resultadoDolarPeso = `${a} dolares a ${b} son ${resultadoRedondeado} pesos`
+        resultDolarPeso = `${a} dolares a ${b} son ${roundedResult} pesos`
     }
-    localStorage.setItem("valorConvertidoDP", resultadoDolarPeso)
-    resultadoConversorDolarPeso.innerHTML = `${resultadoDolarPeso}`;
+    localStorage.setItem("valueDolarPeso", resultDolarPeso)
+    resultConverterDolarPeso.innerHTML = `${resultDolarPeso}`;
     form.reset()
 }
 
-function obtenerLocalStorageDolarPeso() {
-    if (localStorage.getItem("valorConvertidoDP") === null) {
-        resultadoConversorDolarPeso.innerHTML = ``
+function getLocalStorageDolarPeso() {
+    if (localStorage.getItem("valueDolarPeso") === null) {
+        resultConverterDolarPeso.innerHTML = ``
     } else {
-        let mostrar = localStorage.getItem("valorConvertidoDP")
-        resultadoConversorDolarPeso.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("valueDolarPeso")
+        resultConverterDolarPeso.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageDolarPeso()
+getLocalStorageDolarPeso()
 
 // --------------------------- sweet alert ---------------------------
 
-const explicacionConversorPD = document.getElementById("explicacionConversorPD")
-explicacionConversorPD.addEventListener('click', () => {
+const infoConverterPesoDolar = document.getElementById("infoConverterPesoDolar")
+infoConverterPesoDolar.addEventListener('click', () => {
     Swal.fire({
         text: 'Ingrese la cantidad de pesos que quiere convertir a dólares. Debajo ingrese el valor del dolar (arriba de la calculadora tiene disponibles los valores actuales del dolar).',
         confirmButtonText: "Ok"
     })
 })
 
-const explicacionConversorDP = document.getElementById("explicacionConversorDP")
-explicacionConversorDP.addEventListener('click', () => {
+const infoConverterDolarPeso = document.getElementById("infoConverterDolarPeso")
+infoConverterDolarPeso.addEventListener('click', () => {
     Swal.fire({
         text: 'Ingrese la cantidad de dólares que quiere convertir a pesos. Debajo ingrese el valor del dolar (arriba de la calculadora tiene disponibles los valores actuales del dolar).',
         confirmButtonText: "Ok"

@@ -1,169 +1,169 @@
 // --------------------------- redondeo ---------------------------
 
-function redondear2(a) {
+function roundTo2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
 // --------------------------- suma ---------------------------
 
-let formSuma = document.getElementById("formSuma")
-formSuma.addEventListener("submit", validarS)
+let formAdd = document.getElementById("formAdd")
+formAdd.addEventListener("submit", validateAdd)
 
-let resultado = 0;
-function sumar(a, b) {
-    resultado = parseFloat(a) + parseFloat(b)
-    return resultado;
+let result = 0;
+let roundedResult = 0;
+function add(a, b) {
+    result = parseFloat(a) + parseFloat(b)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resSuma = document.getElementById("resSuma")
+let showResultAdd = document.getElementById("showResultAdd")
 
-let sumaA = document.getElementById("sumaA")
-let sumaB = document.getElementById("sumaB")
+let addA = document.getElementById("addA")
+let addB = document.getElementById("addB")
 
-function validarS(e) {
+function validateAdd(e) {
     e.preventDefault()
     let form = e.target
-    let a = sumaA.value
-    let b = sumaB.value
-    let resultadoText = ``
-    sumar(a,b)
-    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El resultado de ${a} + ${b} es ${resultado}`
-    localStorage.setItem("resultadoSuma", resultadoText)
-    resSuma.innerHTML = `${resultadoText}`;
+    let a = addA.value
+    let b = addB.value
+    let resultAdd = ``
+    add(a,b)
+    isNaN(a) || isNaN(b) ? resultAdd = `Debe ingresar valores numéricos` : resultAdd = `El resultado de ${a} + ${b} es ${roundedResult}`
+    localStorage.setItem("resultAdd", resultAdd)
+    showResultAdd.innerHTML = `${resultAdd}`;
     form.reset()
 }
 
-function obtenerLocalStorageSuma() {
-    if (localStorage.getItem("resultadoSuma") === null) {
-        resSuma.innerHTML = `El resultado es:`
+function getLocalStorageAdd() {
+    if (localStorage.getItem("resultAdd") === null) {
+        showResultAdd.innerHTML = `El resultado es:`
     } else {
-        let mostrar = localStorage.getItem("resultadoSuma")
-        resSuma.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultAdd")
+        showResultAdd.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageSuma()
+getLocalStorageAdd()
 
 // --------------------------- resta ---------------------------
 
-let formResta = document.getElementById("formResta")
-formResta.addEventListener("submit", validarR)
+let formSubtract = document.getElementById("formSubtract")
+formSubtract.addEventListener("submit", validateSubtract)
 
-let resultadoRed = 0;
-function restar(a, b) {
-    resultado = parseFloat(a) - parseFloat(b)
-    resultadoRed = redondear2(resultado)
-    return resultadoRed;
+function subtract(a, b) {
+    result = parseFloat(a) - parseFloat(b)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resResta = document.getElementById("resResta")
+let showResultSubtract = document.getElementById("showResultSubtract")
 
-let restaA = document.getElementById("restaA")
-let restaB = document.getElementById("restaB")
+let subtractA = document.getElementById("subtractA")
+let subtractB = document.getElementById("subtractB")
 
-function validarR(e) {
+function validateSubtract(e) {
     e.preventDefault()
     let form = e.target
-    let a = restaA.value
-    let b = restaB.value
-    let resultadoText = ``
-    restar(a,b)
-    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El resultado de ${a} - ${b} es ${resultadoRed}`
-    localStorage.setItem("resultadoResta", resultadoText)
-    resResta.innerHTML = `${resultadoText}`;
+    let a = subtractA.value
+    let b = subtractB.value
+    let resultSubtract = ``
+    subtract(a,b)
+    isNaN(a) || isNaN(b) ? resultSubtract = `Debe ingresar valores numéricos` : resultSubtract = `El resultado de ${a} - ${b} es ${roundedResult}`
+    localStorage.setItem("resultSubtract", resultSubtract)
+    showResultSubtract.innerHTML = `${resultSubtract}`;
     form.reset()
 }
 
-function obtenerLocalStorageResta() {
-    if (localStorage.getItem("resultadoResta") === null) {
-        resResta.innerHTML = `El resultado es:`
+function getLocalStorageSubtract() {
+    if (localStorage.getItem("resultSubtract") === null) {
+        showResultSubtract.innerHTML = `El resultado es:`
     } else {
-        let mostrar = localStorage.getItem("resultadoResta")
-        resResta.innerHTML = `${mostrar}`;
+        let mostrar = localStorage.getItem("resultSubtract")
+        showResultSubtract.innerHTML = `${mostrar}`;
     }
 }
 
-obtenerLocalStorageResta()
+getLocalStorageSubtract()
 
 // --------------------------- multiplicación ---------------------------
 
-let formMult = document.getElementById("formMult")
-formMult.addEventListener("submit", validarM)
+let formMultiply = document.getElementById("formMultiply")
+formMultiply.addEventListener("submit", validateMultiply)
 
-let resultadoM = 0
-function multiplicar(a, b) {
-    resultado = parseFloat(a) * parseFloat(b)
-    return resultado;
+function multiply(a, b) {
+    result = parseFloat(a) * parseFloat(b)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resMult = document.getElementById("resMult")
+let showResultMultiply = document.getElementById("showResultMultiply")
 
-let multA = document.getElementById("multA")
-let multB = document.getElementById("multB")
+let multiplyA = document.getElementById("multiplyA")
+let multiplyB = document.getElementById("multiplyB")
 
-function validarM(e) {
+function validateMultiply(e) {
     e.preventDefault()
     let form = e.target
-    let a = form.children[0].value
-    let b = form.children[2].value
-    let resultadoText = ``
-    multiplicar(a,b)
-    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El resultado de ${a} x ${b} es ${resultado}` 
-    localStorage.setItem("resultadoMult", resultadoText)
-    resMult.innerHTML = `${resultadoText}`;
+    let a = multiplyA.value
+    let b = multiplyB.value
+    let resultMultiply = ``
+    multiply(a,b)
+    isNaN(a) || isNaN(b) ? resultMultiply = `Debe ingresar valores numéricos` : resultMultiply = `El resultado de ${a} x ${b} es ${roundedResult}` 
+    localStorage.setItem("resultMultiply", resultMultiply)
+    showResultMultiply.innerHTML = `${resultMultiply}`;
     form.reset()
 }
 
-function obtenerLocalStorageMult() {
-    if (localStorage.getItem("resultadoMult") === null) {
-        resMult.innerHTML = `El resultado es:`
+function getLocalStorageMultiply() {
+    if (localStorage.getItem("resultMultiply") === null) {
+        showResultMultiply.innerHTML = `El resultado es:`
     } else {
-        let mostrar = localStorage.getItem("resultadoMult")
-        resMult.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultMultiply")
+        showResultMultiply.innerHTML = `${show}`;
     }
     
 }
 
-obtenerLocalStorageMult()
+getLocalStorageMultiply()
 
 // --------------------------- división ---------------------------
 
-let formDiv = document.getElementById("formDiv")
-formDiv.addEventListener("submit", validarD)
+let formSplit = document.getElementById("formSplit")
+formSplit.addEventListener("submit", validateSplit)
 
-let resultadoRedD = 0;
-function dividir(a, b) {
-    resultado = parseFloat(a) / parseFloat(b)
-    resultadoRedD = redondear2(resultado)
-    return resultadoRedD;
+function split(a, b) {
+    result = parseFloat(a) / parseFloat(b)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resDiv = document.getElementById("resDiv")
+let showResultSplit = document.getElementById("showResultSplit")
 
-let divA = document.getElementById("divA")
-let divB = document.getElementById("divB")
+let splitA = document.getElementById("splitA")
+let splitB = document.getElementById("splitB")
 
-function validarD(e) {
+function validateSplit(e) {
     e.preventDefault()
     let form = e.target
-    let a = form.children[0].value
-    let b = form.children[2].value
-    let resultadoText = ``
-    dividir(a,b)
-    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El resultado de ${a} / ${b} es ${resultadoRedD}`
-    localStorage.setItem("resultadoDiv", resultadoText)
-    resDiv.innerHTML = `${resultadoText}`;
+    let a = splitA.value
+    let b = splitB.value
+    let resultSplit = ``
+    split(a,b)
+    isNaN(a) || isNaN(b) ? resultSplit = `Debe ingresar valores numéricos` : resultSplit = `El resultado de ${a} / ${b} es ${roundedResult}`
+    localStorage.setItem("resultSplit", resultSplit)
+    showResultSplit.innerHTML = `${resultSplit}`;
     form.reset()
 }
 
-function obtenerLocalStorageDiv() {
-    if (localStorage.getItem("resultadoDiv") === null) {
-        resDiv.innerHTML = `El resultado es:`
+function getLocalStorageSplit() {
+    if (localStorage.getItem("resultSplit") === null) {
+        showResultSplit.innerHTML = `El resultado es:`
     } else {
-        let mostrar = localStorage.getItem("resultadoDiv")
-        resDiv.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultSplit")
+        showResultSplit.innerHTML = `${show}`;
     }
     
 }
 
-obtenerLocalStorageDiv()
+getLocalStorageSplit()

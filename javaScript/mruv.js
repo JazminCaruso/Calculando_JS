@@ -1,311 +1,312 @@
 // --------------------------- redondeo ---------------------------
 
-function redondear2(a) {
+function roundTo2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
 // --------------------------- velocidad 1 ---------------------------
 
-let formularioVel1 = document.getElementById("formVel1")
-formularioVel1.addEventListener("submit", validarV1)
+let formSpeed1 = document.getElementById("formSpeed1")
+formSpeed1.addEventListener("submit", validateSpeed1)
 
-let resultado = 0
-function velocidad1(a, b, c) {
-    resultado = parseFloat(a) + (parseFloat(b)*parseFloat(c))
-    resRed = redondear2(resultado)
-    return resRed;
+let result = 0;
+let roundedResult = 0;
+function speed1(a, b, c) {
+    result = parseFloat(a) + (parseFloat(b)*parseFloat(c))
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultV1 = document.getElementById("resV1")
+let showResultSpeed1 = document.getElementById("showResultSpeed1")
 
-function validarV1(e) {
+function validateSpeed1(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
-    let resultadoText = ``
-    velocidad1(a, b, c)
-    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La velocidad es: ${resRed} m/s`
-    localStorage.setItem("valorV1", resultadoText)
-    resultV1.innerHTML = `${resultadoText}`;
+    let resultSpeed1 = ``
+    speed1(a, b, c)
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultSpeed1 = `Debe ingresar valores numéricos` : resultSpeed1 = `La velocidad es: ${roundedResult} m/s`
+    localStorage.setItem("resultSpeed1", resultSpeed1)
+    showResultSpeed1.innerHTML = `${resultSpeed1}`;
     form.reset()
 }
 
-function obtenerLocalStorageV1() {
-    if (localStorage.getItem("valorV1") === null) {
-        resultV1.innerHTML = `La velocidad es:`
+function getLocalStorageSpeed1() {
+    if (localStorage.getItem("resultSpeed1") === null) {
+        showResultSpeed1.innerHTML = `La velocidad es:`
     } else {
-        let mostrar = localStorage.getItem("valorV1")
-        resultV1.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultSpeed1")
+        showResultSpeed1.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageV1()
+getLocalStorageSpeed1()
 
 // --------------------------- velocidad 2 ---------------------------
 
-let formularioVel2 = document.getElementById("formVel2")
-formularioVel2.addEventListener("submit", validarV2)
+let formSpeed2 = document.getElementById("formSpeed2")
+formSpeed2.addEventListener("submit", validateSpeed2)
 
-function velocidad2(a, b, c) {
-    resultado = ((parseFloat(a)**2) + (2*parseFloat(b)*parseFloat(c)))**0.5
-    resRed = redondear2(resultado)
-    return resRed;
+function speed2(a, b, c) {
+    result = ((parseFloat(a)**2) + (2*parseFloat(b)*parseFloat(c)))**0.5
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultV2 = document.getElementById("resV2")
+let showResultSpeed2 = document.getElementById("showResultSpeed2")
 
-function validarV2(e) {
+function validateSpeed2(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
-    let resultadoText = ``
-    velocidad2(a, b, c)
-    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La velocidad es: ${resRed} m/s`
-    localStorage.setItem("valorV2", resultadoText)
-    resultV2.innerHTML = `${resultadoText}`;
+    let resultSpeed2 = ``
+    speed2(a, b, c)
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultSpeed2 = `Debe ingresar valores numéricos` : resultSpeed2 = `La velocidad es: ${roundedResult} m/s`
+    localStorage.setItem("resultSpeed2", resultSpeed2)
+    showResultSpeed2.innerHTML = `${resultSpeed2}`;
     form.reset()
 }
 
-function obtenerLocalStorageV2() {
-    if (localStorage.getItem("valorV2") === null) {
-        resultV2.innerHTML = `La velocidad es:`
+function getLocalStorageSpeed2() {
+    if (localStorage.getItem("resultSpeed2") === null) {
+        showResultSpeed2.innerHTML = `La velocidad es:`
     } else {
-        let mostrar = localStorage.getItem("valorV2")
-        resultV2.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultSpeed2")
+        showResultSpeed2.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageV2()
+getLocalStorageSpeed2()
 
 // --------------------------- aceleración ---------------------------
 
-let formularioAcel = document.getElementById("formAcel")
-formularioAcel.addEventListener("submit", validarA)
+let formAcceleration = document.getElementById("formAcceleration")
+formAcceleration.addEventListener("submit", validateAcceleration)
 
-function aceleracion(a, b, c) {
-    resultado = (parseFloat(b) - parseFloat(a)) / parseFloat(c)
-    resRed = redondear2(resultado)
-    return resRed;
+function acceleration(a, b, c) {
+    result = (parseFloat(b) - parseFloat(a)) / parseFloat(c)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultA = document.getElementById("resA")
+let showResultAcceleration = document.getElementById("showResultAcceleration")
 
-function validarA(e) {
+function validateAcceleration(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
-    let resultadoText = ``
-    aceleracion(a, b, c)
-    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La aceleración es: ${resRed} m/s²`
-    localStorage.setItem("valorA", resultadoText)
-    resultA.innerHTML = `${resultadoText}`;
+    let resultAcceleration = ``
+    acceleration(a, b, c)
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultAcceleration = `Debe ingresar valores numéricos` : resultAcceleration = `La aceleración es: ${roundedResult} m/s²`
+    localStorage.setItem("resultAcceleration", resultAcceleration)
+    showResultAcceleration.innerHTML = `${resultAcceleration}`;
     form.reset()
 }
 
-function obtenerLocalStorageA() {
-    if (localStorage.getItem("valorA") === null) {
-        resultA.innerHTML = `La aceleración es:`
+function getLocalStorageAcceleration() {
+    if (localStorage.getItem("resultAcceleration") === null) {
+        showResultAcceleration.innerHTML = `La aceleración es:`
     } else {
-        let mostrar = localStorage.getItem("valorA")
-        resultA.innerHTML = `${mostrar}`;
+        let mostrar = localStorage.getItem("resultAcceleration")
+        showResultAcceleration.innerHTML = `${mostrar}`;
     }
 }
 
-obtenerLocalStorageA()
+getLocalStorageAcceleration()
 
 // --------------------------- tiempo ---------------------------
 
-let formularioTiempo = document.getElementById("formTiempo")
-formularioTiempo.addEventListener("submit", validarT)
+let formTime = document.getElementById("formTime")
+formTime.addEventListener("submit", validateTime)
 
-function tiempo(a, b, c) {
-    resultado = (parseFloat(b) - parseFloat(a)) / parseFloat(c)
-    resRed = redondear2(resultado)
-    return resRed;
+function time(a, b, c) {
+    result = (parseFloat(b) - parseFloat(a)) / parseFloat(c)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultT = document.getElementById("resT")
+let showResultTime = document.getElementById("showResultTime")
 
-function validarT(e) {
+function validateTime(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
-    let resultadoText = ``
-    tiempo(a, b, c)
-    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El tiempo es: ${resRed} s`
-    localStorage.setItem("valorT", resultadoText)
-    resultT.innerHTML = `${resultadoText}`;
+    let resultTime = ``
+    time(a, b, c)
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultTime = `Debe ingresar valores numéricos` : resultTime = `El tiempo es: ${roundedResult} s`
+    localStorage.setItem("resultTime", resultTime)
+    showResultTime.innerHTML = `${resultTime}`;
     form.reset()
 }
 
-function obtenerLocalStorageT() {
-    if (localStorage.getItem("valorT") === null) {
-        resultT.innerHTML = `El tiempo es:`
+function getLocalStorageTime() {
+    if (localStorage.getItem("resultTime") === null) {
+        showResultTime.innerHTML = `El tiempo es:`
     } else {
-        let mostrar = localStorage.getItem("valorT")
-        resultT.innerHTML = `${mostrar}`;
+        let mostrar = localStorage.getItem("resultTime")
+        showResultTime.innerHTML = `${mostrar}`;
     }
 }
 
-obtenerLocalStorageT()
+getLocalStorageTime()
 
 // --------------------------- distancia 1 ---------------------------
 
-let formularioDis1 = document.getElementById("formDis1")
-formularioDis1.addEventListener("submit", validarD1)
+let formDistance1 = document.getElementById("formDistance1")
+formDistance1.addEventListener("submit", validateDistance1)
 
-function distancia1(a, b, c) {
-    resultado = ((parseFloat(a) + parseFloat(b)) / 2)*(parseFloat(c))
-    resRed = redondear2(resultado)
-    return resRed;
+function distance1(a, b, c) {
+    result = ((parseFloat(a) + parseFloat(b)) / 2)*(parseFloat(c))
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultD1 = document.getElementById("resD1")
+let showResultDistance1 = document.getElementById("showResultDistance1")
 
-function validarD1(e) {
+function validateDistance1(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
-    let resultadoText = ``
-    distancia1(a, b, c)
-    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
-    localStorage.setItem("valorD1", resultadoText)
-    resultD1.innerHTML = `${resultadoText}`;
+    let resultDistance1 = ``
+    distance1(a, b, c)
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultDistance1 = `Debe ingresar valores numéricos` : resultDistance1 = `La distancia es: ${roundedResult} metros`
+    localStorage.setItem("resultDistance1", resultDistance1)
+    showResultDistance1.innerHTML = `${resultDistance1}`;
     form.reset()
 }
 
-function obtenerLocalStorageD1() {
-    if (localStorage.getItem("valorD1") === null) {
-        resultD1.innerHTML = `La distancia es:`
+function getLocalStorageDistance1() {
+    if (localStorage.getItem("resultDistance1") === null) {
+        showResultDistance1.innerHTML = `La distancia es:`
     } else {
-        let mostrar = localStorage.getItem("valorD1")
-        resultD1.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultDistance1")
+        showResultDistance1.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageD1()
+getLocalStorageDistance1()
 
 // --------------------------- distancia 2 ---------------------------
 
-let formularioDis2 = document.getElementById("formDis2")
-formularioDis2.addEventListener("submit", validarD2)
+let formDistance2 = document.getElementById("formDistance2")
+formDistance2.addEventListener("submit", validateDistance2)
 
-function distancia2(a, b, c) {
-    resultado = (parseFloat(a)*parseFloat(c)) + ((parseFloat(b)*(parseFloat(c)**2))/2)
-    resRed = redondear2(resultado)
-    return resRed;
+function distance2(a, b, c) {
+    result = (parseFloat(a)*parseFloat(c)) + ((parseFloat(b)*(parseFloat(c)**2))/2)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultD2 = document.getElementById("resD2")
+let showResultDistance2 = document.getElementById("showResultDistance2")
 
-function validarD2(e) {
+function validateDistance2(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
-    let resultadoText = ``
-    distancia2(a, b, c)
-    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
-    localStorage.setItem("valorD2", resultadoText)
-    resultD2.innerHTML = `${resultadoText}`;
+    let resultDistance2 = ``
+    distance2(a, b, c)
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultDistance2 = `Debe ingresar valores numéricos` : resultDistance2 = `La distancia es: ${roundedResult} metros`
+    localStorage.setItem("resultDistance2", resultDistance2)
+    showResultDistance2.innerHTML = `${resultDistance2}`;
     form.reset()
 }
 
-function obtenerLocalStorageD2() {
-    if (localStorage.getItem("valorD2") === null) {
-        resultD2.innerHTML = `La distancia es:`
+function getLocalStorageDistance2() {
+    if (localStorage.getItem("resultDistance2") === null) {
+        showResultDistance2.innerHTML = `La distancia es:`
     } else {
-        let mostrar = localStorage.getItem("valorD2")
-        resultD2.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultDistance2")
+        showResultDistance2.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageD2()
+getLocalStorageDistance2()
 
 // --------------------------- distancia 3 ---------------------------
 
-let formularioDis3 = document.getElementById("formDis3")
-formularioDis3.addEventListener("submit", validarD3)
+let formDistance3 = document.getElementById("formDistance3")
+formDistance3.addEventListener("submit", validateDistance3)
 
-function distancia3(a, b, c) {
-    resultado = (parseFloat(b)**2 - parseFloat(a)**2) / (2*parseFloat(c))
-    resRed = redondear2(resultado)
-    return resRed;
+function distance3(a, b, c) {
+    result = (parseFloat(b)**2 - parseFloat(a)**2) / (2*parseFloat(c))
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultD3 = document.getElementById("resD3")
+let showResultDistance3 = document.getElementById("showResultDistance3")
 
-function validarD3(e) {
+function validateDistance3(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
-    let resultadoText = ``
-    distancia3(a, b, c)
-    isNaN(a) || isNaN(b) || isNaN(c) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La distancia es: ${resRed} metros`
-    localStorage.setItem("valorD3", resultadoText)
-    resultD3.innerHTML = `${resultadoText}`;
+    let resultDistance3 = ``
+    distance3(a, b, c)
+    isNaN(a) || isNaN(b) || isNaN(c) ? resultDistance3 = `Debe ingresar valores numéricos` : resultDistance3 = `La distancia es: ${roundedResult} metros`
+    localStorage.setItem("resultDistance3", resultDistance3)
+    showResultDistance3.innerHTML = `${resultDistance3}`;
     form.reset()
 }
 
-function obtenerLocalStorageD3() {
-    if (localStorage.getItem("valorD3") === null) {
-        resultD3.innerHTML = `La distancia es:`
+function getLocalStorageDistance3() {
+    if (localStorage.getItem("resultDistance3") === null) {
+        showResultDistance3.innerHTML = `La distancia es:`
     } else {
-        let mostrar = localStorage.getItem("valorD3")
-        resultD3.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultDistance3")
+        showResultDistance3.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageD3()
+getLocalStorageDistance3()
 
 // --------------------------- posicion ---------------------------
 
-let formularioPos = document.getElementById("formPos")
-formularioPos.addEventListener("submit", validarP)
+let formPosition = document.getElementById("formPosition")
+formPosition.addEventListener("submit", validatePosition)
 
-function posicion(a, b, c, d) {
-    resultado = parseFloat(a) + (parseFloat(b)*parseFloat(d)) + ((parseFloat(c)*(parseFloat(d)**2))/2)
-    resRed = redondear2(resultado)
-    return resRed;
+function position(a, b, c, d) {
+    result = parseFloat(a) + (parseFloat(b)*parseFloat(d)) + ((parseFloat(c)*(parseFloat(d)**2))/2)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultP = document.getElementById("resP")
+let showResultPosition = document.getElementById("showResultPosition")
 
-function validarP(e) {
+function validatePosition(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
     let c = form.children[7].value
     let d = form.children[10].value
-    let resultadoText = ``
-    posicion(a, b, c, d)
-    isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La posición es: ${resRed} metros`
-    localStorage.setItem("valorP", resultadoText)
-    resultP.innerHTML = `${resultadoText}`;
+    let resultPosition = ``
+    position(a, b, c, d)
+    isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d) ? resultPosition = `Debe ingresar valores numéricos` : resultPosition = `La posición es: ${roundedResult} metros`
+    localStorage.setItem("resultPosition", resultPosition)
+    showResultPosition.innerHTML = `${resultPosition}`;
     form.reset()
 }
 
-function obtenerLocalStorageP() {
-    if (localStorage.getItem("valorP") === null) {
-        resultP.innerHTML = `La posición es:`
+function getLocalStoragePosition() {
+    if (localStorage.getItem("resultPosition") === null) {
+        showResultPosition.innerHTML = `La posición es:`
     } else {
-        let mostrar = localStorage.getItem("valorP")
-        resultP.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultPosition")
+        showResultPosition.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageP()
+getLocalStoragePosition()

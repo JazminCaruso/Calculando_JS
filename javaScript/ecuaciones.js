@@ -1,161 +1,160 @@
 // --------------------------- redondeo ---------------------------
 
-function redondear2(a) {
+function roundTo2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
 // --------------------------- primer grado ---------------------------
 
-let formulario = document.getElementById("formulario1")
-formulario.addEventListener("submit", validar)
+let formLinearEquation = document.getElementById("formLinearEquation")
+formLinearEquation.addEventListener("submit", validateLinearEquation)
 
-let operacion = 0
-let resultado = 0
-function ecPrimerGrado(a, b) {
-    operacion = (parseFloat(-b)) / parseFloat(a)
-    resultado = redondear2(operacion)
-    return resultado;
+let operation = 0
+let result = 0
+function linearEquation(a, b) {
+    operation = (parseFloat(-b)) / parseFloat(a)
+    result = roundTo2(operation)
+    return result;
 }
 
-let ecuac = document.getElementById("ecL")
-let result = document.getElementById("resL")
+let showLinearEquation = document.getElementById("showLinearEquation")
+let resultLinearEquation = document.getElementById("resultLinearEquation")
 
-function validar(e) {
+function validateLinearEquation(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
-    ecPrimerGrado(a,b)
+    linearEquation(a,b)
     let bNeg = b*-1
-    b >= 0 ?  ecuacion = `La ecuación es: ${a}X + ${b} = 0` : ecuacion = `La ecuación es: ${a}X - ${bNeg} = 0`
+    b >= 0 ?  equation = `La ecuación es: ${a}X + ${b} = 0` : equation = `La ecuación es: ${a}X - ${bNeg} = 0`
     if ((a == 0) && isNaN(b)) {
-        resultadoText = `No existe raíz y los valores deben ser numéricos`
-        ecuacion = `No es posible calcular la ecuación`
+        resultEquation = `No existe raíz y los valores deben ser numéricos`
+        equation = `No es posible calcular la ecuación`
     } else if (isNaN(a) || isNaN(b)) {
-        resultadoText = `Debe ingresar valores numéricos`
-        ecuacion = `No es posible calcular la ecuación`
+        resultEquation = `Debe ingresar valores numéricos`
+        equation = `No es posible calcular la ecuación`
     } else if (a == 0) {
-        resultadoText = `No existe raíz`
+        resultEquation = `No existe raíz`
     } else {
-        resultadoText = `La raíz es: ${resultado}`
+        resultEquation = `La raíz es: ${result}`
     }
-    localStorage.setItem("resultadoEcPG", resultadoText)
-    localStorage.setItem("ecuacionPG", ecuacion)
-    ecuac.innerHTML = `${ecuacion}`;
-    result.innerHTML = `${resultadoText}`;
+    localStorage.setItem("resultLinearEquation", resultEquation)
+    localStorage.setItem("linearEquation", equation)
+    showLinearEquation.innerHTML = `${equation}`;
+    resultLinearEquation.innerHTML = `${resultEquation}`;
     form.reset()
 }
 
-function obtenerLocalStorageEcuacionPG() {
-    if (localStorage.getItem("resultadoEcPG") === null) {
-        result.innerHTML = `La raíz es:`
+function getLocalStorageLinearEquationResult() {
+    if (localStorage.getItem("resultLinearEquation") === null) {
+        resultLinearEquation.innerHTML = `La raíz es:`
     } else {
-        let mostrar = localStorage.getItem("resultadoEcPG")
-        result.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultLinearEquation")
+        resultLinearEquation.innerHTML = `${show}`;
     }
 }
 
-function obtenerLocalStorageEcuacionPG2() {
-    if (localStorage.getItem("ecuacionPG") === null) {
-        ecuac.innerHTML = `La ecuación es:`
+function getLocalStorageLinearEquation() {
+    if (localStorage.getItem("linearEquation") === null) {
+        showLinearEquation.innerHTML = `La ecuación es:`
     } else {
-        let mostrar = localStorage.getItem("ecuacionPG")
-        ecuac.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("linearEquation")
+        showLinearEquation.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageEcuacionPG()
-obtenerLocalStorageEcuacionPG2()
+getLocalStorageLinearEquationResult()
+getLocalStorageLinearEquation()
 
 // --------------------------- segundo grado ---------------------------
 
-let formularioC = document.getElementById("formulario2")
-formularioC.addEventListener("submit", validarC)
+let formQuadraticEquation = document.getElementById("formQuadraticEquation")
+formQuadraticEquation.addEventListener("submit", validateQuadraticEquation)
 
-let resultadoC = 0
-function ecSegundoGrado(aC, bC, cC) {
+function quadraticEquation(aC, bC, cC) {
     let a = parseFloat(aC)
     let b = parseFloat(bC)
     let c = parseFloat(cC)
     if (b > 0) {
         x_1 = (-b - ((b**2 - 4*a*c)**0.5)) / (2.0 * a);
         x_2 = (c / a) / x_1;
-        resultadoC = [x_1, x_2];
+        result = [x_1, x_2];
     } else {
         x_1 = (-b + ((b**2 - 4*a*c)**0.5)) / (2.0 * a);
         x_2 = (c / a) / x_1;
-        resultadoC = [x_1, x_2];
+        result = [x_1, x_2];
     }
-    return resultadoC
+    return result
 }
 
 
-let ecuacC = document.getElementById("ecC")
-let resultC = document.getElementById("resC")
+let showQuadraticEquation = document.getElementById("showQuadraticEquation")
+let resultQuadraticEquation = document.getElementById("resultQuadraticEquation")
 
-function validarC(e) {
+function validateQuadraticEquation(e) {
     e.preventDefault()
     let form = e.target
     let aC = form.children[1].value
     let bC = form.children[4].value
     let cC = form.children[7].value
-    ecSegundoGrado(aC, bC, cC)
+    quadraticEquation(aC, bC, cC)
     let bCNeg = bC*-1
     let cCNeg = cC*-1
     if ((bC>=0) && (cC>=0)) {
-        ecuacionC = `La ecuación es: ${aC}X² + ${bC}X + ${cC}= 0`
+        equation = `La ecuación es: ${aC}X² + ${bC}X + ${cC}= 0`
     } else if ((bC<0) && (cC<0)) {
-        ecuacionC = `La ecuación es: ${aC}X² - ${bCNeg}X - ${cCNeg} = 0`
+        equation = `La ecuación es: ${aC}X² - ${bCNeg}X - ${cCNeg} = 0`
     } else if ((bC<0) && (cC>=0)) {
-        ecuacionC = `La ecuación es: ${aC}X² - ${bCNeg}X + ${cC} = 0`
+        equation = `La ecuación es: ${aC}X² - ${bCNeg}X + ${cC} = 0`
     } else if ((bC>=0) && (cC<0)) {
-        ecuacionC = `La ecuación es: ${aC}X² + ${bC}X - ${cCNeg} = 0`
+        equation = `La ecuación es: ${aC}X² + ${bC}X - ${cCNeg} = 0`
     }
     if ((bC**2 - 4*aC*cC) < 0) {
-        resultadoTextC = `No existe solución real`
+        resultEquation = `No existe solución real`
     } else if ((aC == 0) && (isNaN(aC) || isNaN(bC) || isNaN(cC))) {
-        resultadoTextC = `La ecuación no es cuadrática y los valores deben ser numéricos`
-        ecuacionC = `No es posible calcular la ecuación`
+        resultEquation = `La ecuación no es cuadrática y los valores deben ser numéricos`
+        equation = `No es posible calcular la ecuación`
     } else if (aC == 0) {
-        resultadoTextC = `La ecuación no es cuadrática`
+        resultEquation = `La ecuación no es cuadrática`
     } else if (isNaN(aC) || isNaN(bC) || isNaN(cC)) {
-        resultadoTextC = `Debe ingresar valores numéricos`
-        ecuacionC = `No es posible calcular la ecuación`
+        resultEquation = `Debe ingresar valores numéricos`
+        equation = `No es posible calcular la ecuación`
     } else {
-        resultadoTextC = `Las raíces son: ${redondear2(resultadoC[0])} y ${redondear2(resultadoC[1])}`
+        resultEquation = `Las raíces son: ${roundTo2(result[0])} y ${roundTo2(result[1])}`
     }
-    localStorage.setItem("resultadoEcSG", resultadoTextC)
-    localStorage.setItem("ecuacionSG", ecuacionC)
-    ecuacC.innerHTML = `${ecuacionC}`;
-    resultC.innerHTML = `${resultadoTextC}`;
+    localStorage.setItem("resultQuadraticEquation", resultEquation)
+    localStorage.setItem("quadraticEquation", equation)
+    showQuadraticEquation.innerHTML = `${equation}`;
+    resultQuadraticEquation.innerHTML = `${resultEquation}`;
     form.reset()
 }
 
-function obtenerLocalStorageEcuacionSG() {
-    if (localStorage.getItem("resultadoEcSG") === null) {
-        resultC.innerHTML = `Las raíces son:`
+function getLocalStorageQuadraticEquationResult() {
+    if (localStorage.getItem("resultQuadraticEquation") === null) {
+        resultQuadraticEquation.innerHTML = `Las raíces son:`
     } else {
-        let mostrar = localStorage.getItem("resultadoEcSG")
-        resultC.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultQuadraticEquation")
+        resultQuadraticEquation.innerHTML = `${show}`;
     }
 }
 
-function obtenerLocalStorageEcuacionSG2() {
-    if (localStorage.getItem("ecuacionSG") === null) {
-        ecuacC.innerHTML = `La ecuación es:`
+function getLocalStorageQuadraticEquation() {
+    if (localStorage.getItem("quadraticEquation") === null) {
+        showQuadraticEquation.innerHTML = `La ecuación es:`
     } else {
-        let mostrar = localStorage.getItem("ecuacionSG")
-        ecuacC.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("quadraticEquation")
+        showQuadraticEquation.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageEcuacionSG()
-obtenerLocalStorageEcuacionSG2()
+getLocalStorageQuadraticEquationResult()
+getLocalStorageQuadraticEquation()
 
 // --------------------------- sweet alert ---------------------------
 
-const partesEcuacionPG = document.getElementById("partesEcuacionPG")
-partesEcuacionPG.addEventListener('click', () => {
+const infoLinearEquation = document.getElementById("infoLinearEquation")
+infoLinearEquation.addEventListener('click', () => {
     Swal.fire({
         imageUrl: "../../img/ecuacionPG.jpg",
         imageHeight: 300,
@@ -166,8 +165,8 @@ partesEcuacionPG.addEventListener('click', () => {
     })
 })
 
-const partesEcuacionSG = document.getElementById("partesEcuacionSG")
-partesEcuacionSG.addEventListener('click', () => {
+const infoQuadraticEquation = document.getElementById("infoQuadraticEquation")
+infoQuadraticEquation.addEventListener('click', () => {
     Swal.fire({
         imageUrl: "../../img/ecuacionSG.jpg",
         imageHeight: 300,

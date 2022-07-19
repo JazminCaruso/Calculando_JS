@@ -1,81 +1,81 @@
 // --------------------------- interés ---------------------------
 
-let formularioInt = document.getElementById("formularioInt")
-formularioInt.addEventListener("submit", validar)
+let formInterests = document.getElementById("formInterests")
+formInterests.addEventListener("submit", validateInterests)
 
-function redondear2(a) {
+function roundTo2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
-let resultado = 0 
-let resRed = 0
+let result = 0 
+let roundedResult = 0
 let resFinal = 0
 
-function intereses(a, b) {
-    resultado = (parseFloat(a)*parseFloat(b))/100
-    resRed = redondear2(resultado)
-    resFinal = resRed + parseFloat(a)
-    return resFinal;
+function interests(a, b) {
+    result = (parseFloat(a)*parseFloat(b))/100
+    roundedResult = roundTo2(result)
+    finalResult = roundedResult + parseFloat(a)
+    return finalResult;
 }
 
-let resultI0 = document.getElementById("resI0")
-let resultI1 = document.getElementById("resI1")
-let resultI2 = document.getElementById("resI2")
+let operation = document.getElementById("operation")
+let interest = document.getElementById("interest")
+let total = document.getElementById("total")
 
-function validar(e) {
+function validateInterests(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
-    let resultadoTe = ``
-    let resultadoTex = ``
-    let resultadoText = ``
-    intereses(a,b)
+    let resultOperation = ``
+    let resultInterest = ``
+    let resultTotal = ``
+    interests(a,b)
     if (isNaN(a) || isNaN(b)) {
-        resultadoTe = `Debe ingresar valores numéricos`
-        resultadoTex = ``
-        resultadoText = ``
+        resultOperation = `Debe ingresar valores numéricos`
+        resultInterest = ``
+        resultTotal = ``
     } else {
-        resultadoTe = `Si el precio es ${a} pesos y la tasa de interés es ${b}`
-        resultadoTex = `El interés es: ${resRed}`
-        resultadoText = `El precio final es: ${resFinal} pesos`
+        resultOperation = `Si el precio es ${a} pesos y la tasa de interés es ${b}`
+        resultInterest = `El interés es: ${roundedResult}`
+        resultTotal = `El precio final es: ${finalResult} pesos`
     }
-    localStorage.setItem("datosIntereses", resultadoTe)
-    localStorage.setItem("valorAgregado", resultadoTex)
-    localStorage.setItem("valorFinal", resultadoText)
-    resultI0.innerHTML = `${resultadoTe}`;
-    resultI1.innerHTML = `${resultadoTex}`;
-    resultI2.innerHTML = `${resultadoText}`;
+    localStorage.setItem("operation", resultOperation)
+    localStorage.setItem("interest", resultInterest)
+    localStorage.setItem("total", resultTotal)
+    operation.innerHTML = `${resultOperation}`;
+    interest.innerHTML = `${resultInterest}`;
+    total.innerHTML = `${resultTotal}`;
     form.reset()
 }
 
-function obtenerLocalStorageDatos() {
-    if (localStorage.getItem("datosIntereses") === null) {
-        resultI0.innerHTML = ``
+function getLocalStorageOperation() {
+    if (localStorage.getItem("operation") === null) {
+        operation.innerHTML = ``
     } else {
-        let mostrar = localStorage.getItem("datosIntereses")
-        resultI0.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("operation")
+        operation.innerHTML = `${show}`;
     }
 }
 
-function obtenerLocalStorageValorA() {
-    if (localStorage.getItem("valorAgregado") === null) {
-        resultI1.innerHTML = `El valor agregado es:`
+function getLocalStorageInterest() {
+    if (localStorage.getItem("interest") === null) {
+        interest.innerHTML = `El interés es:`
     } else {
-        let mostrar = localStorage.getItem("valorAgregado")
-        resultI1.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("interest")
+        interest.innerHTML = `${show}`;
     }
 }
 
-function obtenerLocalStorageValorF() {
-    if (localStorage.getItem("valorFinal") === null) {
-        resultI2.innerHTML = `El valor final es:`
+function getLocalStorageTotal() {
+    if (localStorage.getItem("total") === null) {
+        total.innerHTML = `El precio final es:`
     } else {
-        let mostrar = localStorage.getItem("valorFinal")
-        resultI2.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("total")
+        total.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageDatos()
-obtenerLocalStorageValorA()
-obtenerLocalStorageValorF()
+getLocalStorageOperation()
+getLocalStorageInterest()
+getLocalStorageTotal()

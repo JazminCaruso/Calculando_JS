@@ -1,87 +1,89 @@
 // --------------------------- redondeo ---------------------------
 
-function redondear2(a) {
+function roundTo2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
 // --------------------------- potencia ---------------------------
 
-let formPot = document.getElementById("formPot")
-formPot.addEventListener("submit", validarP)
+let formPower = document.getElementById("formPower")
+formPower.addEventListener("submit", validatePower)
 
-function potencia(a, b) {
-    resultado = parseFloat(a) ** parseFloat(b)
-    resultadoRedP = redondear2(resultado)
-    return resultadoRedP;
+let result = 0
+let roundedResult = 0
+function power(a, b) {
+    result = parseFloat(a) ** parseFloat(b)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resPot = document.getElementById("resPot")
+let showResultPower = document.getElementById("showResultPower")
 
-function validarP(e) {
+function validatePower(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
-    resultadoText = ``
-    potencia(a, b)
-    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `${a} elevado a ${b} es ${resultadoRedP}`
-    localStorage.setItem("resultadoPotencia", resultadoText)
-    resPot.innerHTML = `${resultadoText}`;
+    resultPower = ``
+    power(a, b)
+    isNaN(a) || isNaN(b) ? resultPower = `Debe ingresar valores numéricos` : resultPower = `${a} elevado a ${b} es ${roundedResult}`
+    localStorage.setItem("resultPower", resultPower)
+    showResultPower.innerHTML = `${resultPower}`;
     form.reset()
 }
 
-function obtenerLocalStoragePotencia() {
-    if (localStorage.getItem("resultadoPotencia") === null) {
-        resPot.innerHTML = `El resultado es:`
+function getLocalStoragePower() {
+    if (localStorage.getItem("resultPower") === null) {
+        showResultPower.innerHTML = `El resultado es:`
     } else {
-        let mostrar = localStorage.getItem("resultadoPotencia")
-        resPot.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultPower")
+        showResultPower.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStoragePotencia()
+getLocalStoragePower()
 
 // --------------------------- raíz ---------------------------
 
-let formRaizG = document.getElementById("formRaizG")
-formRaizG.addEventListener("submit", validarRG)
+let formRoot = document.getElementById("formRoot")
+formRoot.addEventListener("submit", validateRoot)
 
-function raizG(a, b) {
-    resultado = parseFloat(b) ** (1/a)
-    resultadoRed = redondear2(resultado)
-    return resultadoRed;
+function root(a, b) {
+    result = parseFloat(b) ** (1/a)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resRaizG = document.getElementById("resRaizG")
+let showResultRoot = document.getElementById("showResultRoot")
 
-function validarRG(e) {
+function validateRoot(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
-    resultadoText = ``
-    raizG(a, b)
-    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `La raíz ${a} de ${b} es ${resultadoRed}`
-    localStorage.setItem("resultadoRaiz", resultadoText)
-    resRaizG.innerHTML = `${resultadoText}`;
+    resultRoot = ``
+    root(a, b)
+    isNaN(a) || isNaN(b) ? resultRoot = `Debe ingresar valores numéricos` : resultRoot = `La raíz ${a} de ${b} es ${roundedResult}`
+    localStorage.setItem("resultRoot", resultRoot)
+    showResultRoot.innerHTML = `${resultRoot}`;
     form.reset()
 }
 
-function obtenerLocalStorageRaiz() {
-    if (localStorage.getItem("resultadoRaiz") === null) {
-        resRaizG.innerHTML = `El resultado es:`
+function getLocalStorageRoot() {
+    if (localStorage.getItem("resultRoot") === null) {
+        showResultRoot.innerHTML = `El resultado es:`
     } else {
-        let mostrar = localStorage.getItem("resultadoRaiz")
-        resRaizG.innerHTML = `${mostrar}`;
+        let mostrar = localStorage.getItem("resultRoot")
+        showResultRoot.innerHTML = `${mostrar}`;
     }
 }
 
-obtenerLocalStorageRaiz()
+getLocalStorageRoot()
 
 // --------------------------- sweet alert ---------------------------
 
-const partesPotencia = document.getElementById("partesPotencia")
-partesPotencia.addEventListener('click', () => {
+const infoPower = document.getElementById("infoPower")
+infoPower.addEventListener('click', () => {
     Swal.fire({
         imageUrl: "../../img/potencia.jpg",
         imageHeight: 300,
@@ -92,8 +94,8 @@ partesPotencia.addEventListener('click', () => {
     })
 })
 
-const partesRaiz = document.getElementById("partesRaiz")
-partesRaiz.addEventListener('click', () => {
+const infoRoot = document.getElementById("infoRoot")
+infoRoot.addEventListener('click', () => {
     Swal.fire({
         imageUrl: "../../img/raiz.jpg",
         imageHeight: 300,

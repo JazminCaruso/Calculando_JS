@@ -1,151 +1,153 @@
 // --------------------------- redondeo ---------------------------
 
-function redondear2(a) {
+function roundTo2(a) {
     return +(Math.round(a + "e+2")  + "e-2");
 }
 
 // --------------------------- masa según peso  ---------------------------
 
-let formularioMasaP = document.getElementById("formMasaP")
-formularioMasaP.addEventListener("submit", validarMP)
+let formMassWeight = document.getElementById("formMassWeight")
+formMassWeight.addEventListener("submit", validateMassWeight)
 
-function masaPeso(a) {
-    resultado = parseFloat(a)/9.8
-    resRed = redondear2(resultado)
-    return resRed;
+let result = 0;
+let roundedResult = 0;
+function massWeight(a) {
+    result = parseFloat(a)/9.8
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultMP = document.getElementById("resMP")
+let showResultMassWeight = document.getElementById("showResultMassWeight")
 
-function validarMP(e) {
+function validateMassWeight(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
-    let resultadoText = ``
-    masaPeso(a)
-    isNaN(a) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor de la masa es: ${resRed} kg`
-    localStorage.setItem("valorMP", resultadoText)
-    resultMP.innerHTML = `${resultadoText}`;
+    let resultMassWeight = ``
+    massWeight(a)
+    isNaN(a) ? resultMassWeight = `Debe ingresar valores numéricos` : resultMassWeight = `El valor de la masa es: ${roundedResult} kg`
+    localStorage.setItem("resultMassWeight", resultMassWeight)
+    showResultMassWeight.innerHTML = `${resultMassWeight}`;
     form.reset()
 }
 
-function obtenerLocalStorageMP() {
-    if (localStorage.getItem("valorMP") === null) {
-        resultMP.innerHTML = `El valor de la masa es:`
+function getLocalStorageMassWeight() {
+    if (localStorage.getItem("resultMassWeight") === null) {
+        showResultMassWeight.innerHTML = `El valor de la masa es:`
     } else {
-        let mostrar = localStorage.getItem("valorMP")
-        resultMP.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultMassWeight")
+        showResultMassWeight.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageMP()
+getLocalStorageMassWeight()
 
 // --------------------------- peso  ---------------------------
 
-let formularioPeso = document.getElementById("formPeso")
-formularioPeso.addEventListener("submit", validarP)
+let formWeight = document.getElementById("formWeight")
+formWeight.addEventListener("submit", validateWeight)
 
-function peso(a) {
-    resultado = parseFloat(a)*9.8
-    resRed = redondear2(resultado)
-    return resRed;
+function weight(a) {
+    result = parseFloat(a)*9.8
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultP = document.getElementById("resP")
+let showResultWeight = document.getElementById("showResultWeight")
 
-function validarP(e) {
+function validateWeight(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
-    let resultadoText = ``
-    peso(a)
-    isNaN(a) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor del peso es: ${resRed} N`
-    localStorage.setItem("valorP", resultadoText)
-    resultP.innerHTML = `${resultadoText}`;
+    let resultWeight = ``
+    weight(a)
+    isNaN(a) ? resultWeight = `Debe ingresar valores numéricos` : resultWeight = `El valor del peso es: ${roundedResult} N`
+    localStorage.setItem("resultWeight", resultWeight)
+    showResultWeight.innerHTML = `${resultWeight}`;
     form.reset()
 }
 
-function obtenerLocalStorageP() {
-    if (localStorage.getItem("valorP") === null) {
-        resultP.innerHTML = `El valor del peso es:`
+function getLocalStorageWeight() {
+    if (localStorage.getItem("resultWeight") === null) {
+        showResultWeight.innerHTML = `El valor del peso es:`
     } else {
-        let mostrar = localStorage.getItem("valorP")
-        resultP.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultWeight")
+        showResultWeight.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageP()
+getLocalStorageWeight()
 
 // --------------------------- masa según fuerza  ---------------------------
 
-let formularioMasaF = document.getElementById("formMasaF")
-formularioMasaF.addEventListener("submit", validarMF)
+let formMassStrength = document.getElementById("formMassStrength")
+formMassStrength.addEventListener("submit", validateMassStrength)
 
-function masaFuerza(a, b) {
-    resultado = parseFloat(a)/parseFloat(b)
-    resRed = redondear2(resultado)
-    return resRed;
+function massStrength(a, b) {
+    result = parseFloat(a)/parseFloat(b)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultMF = document.getElementById("resMF")
+let showResultMassStrength = document.getElementById("showResultMassStrength")
 
-function validarMF(e) {
+function validateMassStrength(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
-    let resultadoText = ``
-    masaFuerza(a, b)
-    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor de la masa es: ${resRed} kg`
-    localStorage.setItem("valorMF", resultadoText)
-    resultMF.innerHTML = `${resultadoText}`;
+    let resultMassStrength = ``
+    massStrength(a, b)
+    isNaN(a) || isNaN(b) ? resultMassStrength = `Debe ingresar valores numéricos` : resultMassStrength = `El valor de la masa es: ${roundedResult} kg`
+    localStorage.setItem("resultMassStrength", resultMassStrength)
+    showResultMassStrength.innerHTML = `${resultMassStrength}`;
     form.reset()
 }
 
-function obtenerLocalStorageMF() {
-    if (localStorage.getItem("valorMF") === null) {
-        resultMF.innerHTML = `El valor de la masa es:`
+function getLocalStorageMassStrength() {
+    if (localStorage.getItem("resultMassStrength") === null) {
+        showResultMassStrength.innerHTML = `El valor de la masa es:`
     } else {
-        let mostrar = localStorage.getItem("valorMF")
-        resultMF.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultMassStrength")
+        showResultMassStrength.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageMF()
+getLocalStorageMassStrength()
 
 // --------------------------- fuerza  ---------------------------
 
-let formularioFuerza = document.getElementById("formFuerza")
-formularioFuerza.addEventListener("submit", validarF)
+let formStrength = document.getElementById("formStrength")
+formStrength.addEventListener("submit", validateStrength)
 
-function fuerza(a, b) {
-    resultado = parseFloat(a)*parseFloat(b)
-    resRed = redondear2(resultado)
-    return resRed;
+function strength(a, b) {
+    result = parseFloat(a)*parseFloat(b)
+    roundedResult = roundTo2(result)
+    return roundedResult;
 }
 
-let resultF = document.getElementById("resF")
+let showResultStrength = document.getElementById("showResultStrength")
 
-function validarF(e) {
+function validateStrength(e) {
     e.preventDefault()
     let form = e.target
     let a = form.children[1].value
     let b = form.children[4].value
-    let resultadoText = ``
-    fuerza(a, b)
-    isNaN(a) || isNaN(b) ? resultadoText = `Debe ingresar valores numéricos` : resultadoText = `El valor de la fuerza es: ${resRed} N`
-    localStorage.setItem("valorF", resultadoText)
-    resultF.innerHTML = `${resultadoText}`;
+    let resultStrength = ``
+    strength(a, b)
+    isNaN(a) || isNaN(b) ? resultStrength = `Debe ingresar valores numéricos` : resultStrength = `El valor de la fuerza es: ${roundedResult} N`
+    localStorage.setItem("resultStrength", resultStrength)
+    showResultStrength.innerHTML = `${resultStrength}`;
     form.reset()
 }
 
-function obtenerLocalStorageF() {
-    if (localStorage.getItem("valorF") === null) {
-        resultF.innerHTML = `El valor de la fuerza es:`
+function getLocalStorageStrength() {
+    if (localStorage.getItem("resultStrength") === null) {
+        showResultStrength.innerHTML = `El valor de la fuerza es:`
     } else {
-        let mostrar = localStorage.getItem("valorF")
-        resultF.innerHTML = `${mostrar}`;
+        let show = localStorage.getItem("resultStrength")
+        showResultStrength.innerHTML = `${show}`;
     }
 }
 
-obtenerLocalStorageF()
+getLocalStorageStrength()
