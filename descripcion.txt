@@ -1,0 +1,11 @@
+CALCULANDO, sitio web compuesto de páginas destinadas a resolver problemas de cálculo.
+El sitio consta de 3 secciones principales: Matemática, Finanzas y Física.
+A su vez, cada sección está compuesta por otras secciones. Dentro de estas subsecciones se pueden encontrar calculadoras relacionadas al tema elegido.
+Las calculadoras disponibles son: operaciones básicas, raíz y potencia, ecuaciones, intereses, plazo fijo, conversor de dolar, estática y cinemática.
+
+El objetivo es, a partir del problema del usuario y de los datos que otorgue, resolver el cálculo y brindar el resultado buscado.
+
+Cada calculadora está diseñada de forma tal, que, si los datos ingresados son incorrectos avisa el incoveniente para que se reingresen los datos de manera correcta y se pueda solucionar el problema.
+Para la lógica de cada calculadora, se tuvo en cuenta qué datos (números positivos, pares, etc.) son adecuados, la fórmula de resolución y los distintos casos posibles según sea necesario.
+En las calculadoras más complejas se encuentra un botón "¿Cómo funciona?" que proporciona un texto y/o imagen explicativa sobre el funcionamiento de la calculadora y los datos que deben ingresarse. 
+Los resultados obtenidos quedan guardados y mostrados en pantalla hasta que se utilice nuevamente esa calculadora para realizar otra operación.

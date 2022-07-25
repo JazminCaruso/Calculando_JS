@@ -77,6 +77,8 @@ input:focus {
     line-height: normal;
     margin-top: 3%;
     margin-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 @media (max-width: 480px) {
@@ -116,7 +118,7 @@ input:focus {
 
 @media (max-width: 500px) {
     .card{
-        width: 80%;;
+        width: 75%;;
     }
 }
 
@@ -202,6 +204,12 @@ h1 > a:hover {
 
 .opcionesVert {
     padding-top: 2%;
+}
+
+@media (max-width: 760px) {
+    .opcionesVert{
+        padding-top: 8%;
+    }
 }
 
 .opcCalcuVert {

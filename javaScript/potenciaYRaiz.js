@@ -63,7 +63,15 @@ function validateRoot(e) {
     let b = form.children[4].value
     resultRoot = ``
     root(a, b)
-    isNaN(a) || isNaN(b) ? resultRoot = `Debe ingresar valores numéricos` : resultRoot = `La raíz ${a} de ${b} es ${roundedResult}`
+    if (isNaN(a) || isNaN(b)) {
+        resultRoot = `Debe ingresar valores numéricos`
+    } else if (a <= 0) {
+        resultRoot = `El índice debe ser mayor que 0`
+    } else if (a%2 == 0 && b < 0) {
+        resultRoot = `No existe solución real`
+    } else {
+        resultRoot = `La raíz ${a} de ${b} es ${roundedResult}`
+    }
     localStorage.setItem("resultRoot", resultRoot)
     showResultRoot.innerHTML = `${resultRoot}`;
     form.reset()
