@@ -1,6 +1,6 @@
 # Calculando_JS
 
-![Calculando_JS Preview](https://jazmincaruso.github.io/Calculando_JS/img/preview.png)
+![Calculando_JS ]((https://jazmincaruso.github.io/Calculando_JS/))
 
 ## Descripción
 Calculando_JS es un sitio web que ofrece una colección de calculadoras en línea para realizar una variedad de cálculos matemáticos y científicos. Cada calculadora está diseñada para ser fácil de usar y proporcionar resultados precisos.
