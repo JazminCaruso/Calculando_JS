@@ -150,7 +150,16 @@ function validateSplit(e) {
     let b = splitB.value
     let resultSplit = ``
     split(a,b)
-    isNaN(a) || isNaN(b) ? resultSplit = `Debe ingresar valores numéricos` : resultSplit = `El resultado de ${a} / ${b} es ${roundedResult}`
+
+    if (isNaN(a) || isNaN(b)) {
+        resultSplit = `Debe ingresar valores numéricos`
+    } else if (parseFloat(b) === 0) {
+        resultSplit = `No se puede dividir por 0`
+    } else {
+        let roundedResult = split(a, b)
+        resultSplit = `El resultado de ${a} / ${b} es ${roundedResult}`
+    }
+    
     localStorage.setItem("resultSplit", resultSplit)
     showResultSplit.innerHTML = `${resultSplit}`;
     form.reset()
